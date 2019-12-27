@@ -1,0 +1,3 @@
+var myList = [["Cookies", 24], ["Brownies", 12], ["Rolls", 6], ["Muffins", 30], ["Truffles", 60]];
+
+console.log(myList);
