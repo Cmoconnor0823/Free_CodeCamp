@@ -1,0 +1,18 @@
+function testLessThan(val) {
+  if (val< 25) {  // Change this line
+    return "Under 25";
+  }
+
+  if (val < 55) {  // Change this line
+    return "Under 55";
+  }
+
+  return "55 or Over";
+}
+
+// Change this value to test
+testLessThan(10);
+console.log(testLessThan(10));// Under 25
+console.log(testLessThan(25));// Under 55
+console.log(testLessThan(55));// 55 and Over
+console.log(testLessThan(105));// 55 and Over

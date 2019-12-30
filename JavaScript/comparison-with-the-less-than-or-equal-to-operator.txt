@@ -1,0 +1,18 @@
+function testLessOrEqual(val) {
+  if (val <= 12) {  // Change this line
+    return "Smaller Than or Equal to 12";
+  }
+
+  if (val <= 24) {  // Change this line
+    return "Smaller Than or Equal to 24";
+  }
+
+  return "More Than 24";
+}
+
+// Change this value to test
+testLessOrEqual(10);
+console.log(testLessOrEqual(6));//smaller than or equal to 12
+console.log(testLessOrEqual(12));//smaller than or equal to12
+console.log(testLessOrEqual(24));//smaller than or equal to 24
+console.log(testLessOrEqual(25));//more than 24
