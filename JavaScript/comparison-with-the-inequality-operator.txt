@@ -1,0 +1,12 @@
+// Setup
+function testNotEqual(val) {
+  if (99 != val) { // Change this line
+    return "Not Equal";
+  }
+  return "Equal";
+}
+
+// Change this value to test
+testNotEqual(99);
+console.log(testNotEqual(99));//Equal
+console.log(testNotEqual(90)); //notEqual

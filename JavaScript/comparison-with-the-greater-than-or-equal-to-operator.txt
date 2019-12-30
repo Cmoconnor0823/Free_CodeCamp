@@ -1,0 +1,19 @@
+function testGreaterOrEqual(val) {
+  if (val >= 20) {  // Change this line
+    return "20 or Over";
+  }
+
+  if (val >= 10) {  // Change this line
+    return "10 or Over";
+  }
+
+  return "Less than 10";
+}
+
+// Change this value to test
+testGreaterOrEqual(10);
+console.log(testGreaterOrEqual(7));//lessThanTen
+console.log(testGreaterOrEqual(10));//10 or Over
+console.log(testGreaterOrEqual(12));//10 or Over
+console.log(testGreaterOrEqual(20));// 20 or Over
+console.log(testGreaterOrEqual(25));// 20 or Over

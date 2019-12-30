@@ -1,0 +1,13 @@
+// Setup
+function testStrictNotEqual(val) {
+  if (val !== 17) { // Change this line
+    return "Not Equal";
+  }
+  return "Equal";
+}
+
+// Change this value to test
+testStrictNotEqual(17);
+console.log(testStrictNotEqual(17));//equal
+console.log(testStrictNotEqual('17'));//notEqual
+console.log(testStrictNotEqual(25));//notEqual
