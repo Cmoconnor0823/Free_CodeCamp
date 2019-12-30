@@ -1,0 +1,31 @@
+function caseInSwitch(val) {
+  var answer = "";
+  // Only change code below this line
+switch(val) {
+  case 1:
+    answer = "alpha";
+    console.log("alpha");
+    break;
+  case 2:
+    console.log("beta");
+    answer = "beta";
+    break;
+  case 3:
+    console.log("gamma");
+    answer = "gamma";
+    break;
+  case 4:
+    console.log("delta");
+    answer = "delta";
+    break;
+}
+  // Only change code above this line
+  return answer;
+}
+
+// Change this value to test
+caseInSwitch(1); //alpha
+caseInSwitch(2);// beta
+caseInSwitch(3);// gamma
+caseInSwitch(4);// delta
+console.log(caseInSwitch("1"));//N.A
