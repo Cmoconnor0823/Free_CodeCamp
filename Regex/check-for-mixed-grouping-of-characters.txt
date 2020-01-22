@@ -1,0 +1,20 @@
+let myString = "Eleanor Roosevelt";
+let myRegex = /(Franklin|Eleanor).*Roosevelt/; // Change this line
+let result = myRegex.test(myString); // Change this line
+console.log(result);
+
+
+// After passing the challenge experiment with myString and see how the grouping works
+
+
+/*Hint 1
+Use a|b to check for either a or b.
+
+Hint 2
+Your regex should use mixed grouping like /P(engu|umpk)in/g.
+
+Hint 3
+Use .* to allow for middle names.
+
+*** /(Fr|Elea).*Roos/  -- this passes the tests why?
+*/

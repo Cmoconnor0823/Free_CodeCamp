@@ -1,0 +1,23 @@
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g; // Change this line
+let result = hello.replace(wsRegex, ""); // Change this line
+console.log(result);
+
+/*Hint 1
+Think of how you can select substrings at the beginning or end of a string.
+
+Hint 2
+Think of how you can select whitespace
+
+Hint 3 
+Think of how you can remove/replace the whitespace
+*/
+
+// ^  start at beginning of string
+//  \s+  one ore more spaces
+//  | test for this |"or" that
+//  \s+ space again
+//  $ end of string
+//  g is needed to test entire string
+
+//final step is to set result to let result = hello.replace(wsRegex, ""); 

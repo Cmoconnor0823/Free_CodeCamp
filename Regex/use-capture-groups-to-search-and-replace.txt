@@ -1,0 +1,19 @@
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
+let replaceText = "$3 $2 $1"; // Change this line
+let result = str.replace(fixRegex, replaceText);
+console.log(result);
+
+/*Hint 1
+You will need three capture groups to accomplish this task.
+
+Hint 2
+Each capture group will need to be separated by a space character.
+
+Hint 3
+The replacement string will use the $ syntax 3 times.*/
+
+// () capture group -- we need 3
+// /s  to account for space in the string --- we need 2
+// /w+   one ore more characters can be found in the capture group
+// line 3 has us using $ to reference the capture groups with 1 being the first group and 3 being the last group

@@ -1,0 +1,18 @@
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)\s\1\s\1$/; // Change this line
+let result = reRegex.test(repeatNum);
+let matchResult = repeatNum.match(reRegex);
+console.log(result);
+console.log("match result ", matchResult);
+
+//^ start at the beginnning of your string
+// () grab/capture a pattern
+//(\d+) capture one or more digits
+// \s  this allows for a space
+// \1 contents of group one
+// then repeat \s\1
+//$ then end of string
+
+/*Kay, that’s a wonderful Regular Expression you’ve produced. It should pass all the tests, but you’re trick of placing a space character into a capturing group and then referencing stuff, freeCodeCamp doesn’t realise that you’ve actually used two spaces. However, note that you don’t actually need to make sure that the separators are both the same type of whitespace, just that they both are whitespace – so you could just do /^(\d+)\s\1\s\d+$/. That should pass all the tests.
+
+But be warned, your Regular Expression isn’t correct. It’ll pass the tests, but your final \d+ should instead still be a reference to your capturing group (\1). For example, with your regular expression, 42 42 52 would pass; but instead it should fail. Good luck!*/

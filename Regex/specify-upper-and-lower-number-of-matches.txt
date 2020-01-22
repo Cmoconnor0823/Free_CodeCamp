@@ -1,0 +1,8 @@
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6}\sno/; // Change this line
+let result = ohRegex.test(ohStr);
+console.log(result);
+//Oh -start of string
+//{3,6} checks for 3 to 6 h's 
+//\s allows for the space between the 2 words
+// no at the end of the string
