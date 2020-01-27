@@ -1,0 +1,31 @@
+function quickCheck(arr, elem) {
+  // change code below this line
+  if (arr.indexOf(elem) >= 0) {
+    return true;
+  }
+  return false;
+  // change code above this line
+}
+
+// change code here to test different cases:
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+
+/*
+alternative solutions
+
+demonstrates how the problem can be solved using the ? : (conditional) operator.
+
+function quickCheck(arr, elem) {
+  return arr.indexOf(elem) >= 0 ? true : false;
+}
+console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
+
+
+demonstrates how the problem can be solved by directly returning result of the comparison.
+
+function quickCheck(arr, elem) {
+  return arr.indexOf(elem) != -1;
+}
+console.log(quickCheck(["squash", "onions", "shallots"], "mushrooms"));
+*/

@@ -1,0 +1,40 @@
+function filteredArray(arr, elem) {
+  let newArr = [];
+  // change code below this line
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i].indexOf(elem) == -1) {
+      newArr.push(arr[i]);
+    }
+  }
+  // change code above this line
+  return newArr;
+}
+
+// change code here to test different cases:
+console.log(filteredArray([["trumpets", 2], ["flutes", 4], ["saxophones", 2] ], 2));
+
+
+/*
+Hints
+
+This function takes in an array of sub arrays first. For each sub array the function uses the element and searches the sub arrays for a match of the element. If no match is found it will create a new array with the subarray that doesnt match the element. then it will return the new array
+
+Hint 1
+A nested for loop must be used to search through every element in the array.
+for (let i = 0; i < arr.length; i++) {}
+
+Hint 2
+Every element of the array must then be compared to the elem parameter passed through the filteredArray() function.
+if (arr[i].indexOf(elem) == -1) {
+}
+
+elem == -1 meaning the index of was unable to find the sub array 
+
+Hint 3
+If a match is NOT found then newArr have that entire subarray added. The push() function is very useful here.
+newArr.push(arr[i]);
+Once that entire subarray is added to newArr the loop continue with the next element.
+
+
+
+*/

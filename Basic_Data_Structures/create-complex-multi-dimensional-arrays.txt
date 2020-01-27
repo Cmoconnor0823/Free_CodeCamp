@@ -1,0 +1,27 @@
+let myNestedArray = [
+  // change code below this line
+  ['unshift', false, 1, 2, 3, 'complex', 'nested'],
+  ['loop', 'shift', 6, 7, 1000, 'method'],
+  ['concat', false, true, 'spread', 'array'],
+  ['mutate', 1327.98, 'splice', 'slice', 'push'],
+  ['iterate', ['deep', 'level', 3, ['deeper', 'level', 4, ['deepest', 'level', 5]
+  ]], 1.3849, 7, '8.4876', 'arbitrary', 'depth']
+  // change code above this line
+];
+
+
+/*
+
+Hints
+
+Hint 1
+The first string - deep - must be inserted three levels deep. This means within exactly threes sets of [square-brackets].
+let threeLevelArray = [
+  "first level",
+  ["Two levels deep", ["Three levels deep"]]
+];
+Using this logic insert strings deep , deeper and deepest in the matrix three levels deep, four levels deep and five levels deep respectively.
+
+
+
+*/

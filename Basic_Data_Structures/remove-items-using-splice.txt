@@ -1,0 +1,17 @@
+const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+// only change code below this line
+arr.splice(1, 4);
+// only change code above this line
+console.log(arr);
+
+
+
+/*
+Hints
+Hint 1
+The array arr currently adds up to the value of 27. Simply remove as many elements from arr, so the sum of the remaining elements is 10.
+
+Hint 2
+Think about which group of consecutive elements you can remove so that the only elements left sum to 10.
+
+*/

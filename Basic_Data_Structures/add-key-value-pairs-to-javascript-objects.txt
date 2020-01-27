@@ -1,0 +1,23 @@
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28
+};
+
+// change code below this line
+foods["bananas"] = 13;
+foods["grapes"] = 35;
+foods["strawberries"] = 27;
+// change code above this line
+
+console.log(foods);
+
+/*
+key value pairs---- this is important terminology
+ foods above has 4 properties with 4 values
+
+Hint 1
+The foods object has already been declared. All that is left to be done is to add three new key-values.
+OBJECT[{ KEY }] = { VALUE };
+The above code will create a ney key-value within the object.
+*/
