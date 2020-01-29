@@ -1,0 +1,30 @@
+function countOnline(usersObj) {
+  // change code below this line
+  let usersOnline = 0;
+for (let user in usersObj) {
+  if (usersObj[user].online === true) {
+    usersOnline++;
+  console.log(usersOnline, "A");
+  };
+  // change code above this line
+}
+  return usersOnline;
+}
+console.log(countOnline(),", B");
+
+/*
+Hints
+Hint 1:
+for (let user in obj) {
+  if (obj.user.online === true) {
+    //code
+  }
+}
+Hint 2
+Example 2 demonstrates how using [square-bracket] notation the code will be executed.
+for (let user in obj) {
+  if (obj[user].online === true) {
+    //code
+  }
+}
+*/
