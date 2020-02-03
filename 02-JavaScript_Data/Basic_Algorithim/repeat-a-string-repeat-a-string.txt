@@ -1,0 +1,27 @@
+function repeatStringNumTimes(str, num) {
+  // repeat after me
+  var repeatStr = "";
+
+  while (num > 0) {
+    repeatStr += str;
+    num --;
+  }
+  return repeatStr;
+}
+
+repeatStringNumTimes("abc", 3);
+
+
+/*
+Hint 1
+The program is very simple, we have to take a variable and return that variable being repeated certain amount of times. No need to add space or anything, just keep repeating it into one single string.
+
+Hint 2
+You can’t edit strings, you will need to create a variable to store the new string.
+
+Hint 3
+Create a loop to repeat the code as many times as needed.
+
+Hint 4
+Make the variable created store the current value and append the word to it.
+*/

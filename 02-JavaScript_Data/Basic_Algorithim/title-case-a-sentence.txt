@@ -1,0 +1,30 @@
+function titleCase(str) {
+  var stringToArray = str.toLowerCase().split(" ");
+  console.log(stringToArray, " String is now a lower case array");
+
+var result = stringToArray.map(function(letter) {
+  return letter.replace(letter.charAt(0), letter.charAt(0).toUpperCase());
+});
+console.log(result, " An array with each first letter upper case");
+  return result.join(" ");
+}
+console.log(titleCase("I'm a little tea pot")," ~ Final Result");
+titleCase("I'm a little tea pot");
+
+
+/*
+
+Hint 1
+You should start by splitting the string into an array of words.
+Split the sentence.
+
+Hint 2
+You should make the word lowercase before making the first letter uppercase.
+
+Use replace method on each word to capitalize the first letter of each word.
+
+Hint 3
+You will need to create a new string with pieces of the previous one and at the end merge everything into a single string again.
+In replace method, give first argument as the position of the first letter using charAt. For second argument write a function to return the capitalized letter as the replacement.
+
+*/

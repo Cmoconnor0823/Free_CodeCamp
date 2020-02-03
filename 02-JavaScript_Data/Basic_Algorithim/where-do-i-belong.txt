@@ -1,0 +1,32 @@
+function getIndexToIns(arr, num) {
+  // Find my place in this sorted array.
+
+ // runs the for loop once for each thing in the array 
+ var arrLength = arr.length; 
+ console.log(arrLength, " length of original array")
+
+  var place = 0;
+
+  for (var i = 0; i < arrLength; i++) {
+    console.log(arr, "original array");
+    if (num > arr[i]) {
+      place++;
+    }
+  } // counts how many array numbers are smaller than num
+  return place; // the above equals num's position in a sorted array
+}
+
+getIndexToIns([40, 60], 50);
+console.log(getIndexToIns([40, 60], 50), "result");
+
+/*
+
+Hint 1
+The first thing to do is sort the array from lower to bigger, just to make the code easier. This is where sort comes in, it needs a callback function so you have to create it.
+
+Hint 2
+Once the array is sorted, then just check for the first number that is bigger and return the index.
+
+Hint 3
+If there is no index for that number then you will have to deal with that case too.
+*/

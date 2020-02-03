@@ -1,0 +1,19 @@
+function truncateString(str, num) {
+  // Clear out that junk in your trunk
+  if (str.length > num) {
+    return str.slice(0, num)+ "...";
+  } else {
+     return str;
+  }
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+console.log(truncateString("A-tisket a-tasket A green and yellow basket", 8));
+
+/*
+Hint 1
+Strings are immutable in JavaScript so we will need a new variable to store the truncated string.
+
+Hint 2
+You will need to use the slice() method and specify where to start and where to stop.
+*/

@@ -1,0 +1,32 @@
+function bouncer(arr) {
+  // Don't show a false ID to this bouncer.
+  console.log(arr);
+return arr.filter(Boolean);
+ /*
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i]) newArr.push(arr[i]);
+  }
+  console.log(newArr);
+  console.log(arr);
+  return newArr;
+
+  */
+}
+console.log(bouncer([7, "ate", "", false, 9]));
+bouncer([7, "ate", "", false, 9]);
+
+
+/*
+Hint 1
+Falsy is something which evaluates to FALSE. There are only six falsy values in JavaScript: undefined, null, NaN, 0, “” (empty string), and false of course.
+
+Hint 2
+We need to make sure we have all the falsy values to compare, we can know it, maybe with a function with all the falsy values…
+
+Hint 3
+Then we need to add a filter() with the falsy values function…
+
+
+
+*/
