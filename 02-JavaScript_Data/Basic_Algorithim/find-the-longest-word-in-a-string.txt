@@ -1,0 +1,28 @@
+function findLongestWordLength(str) {
+  var words = str.split(' ');
+  var maxLength = 0;
+
+  for (var i = 0; i < words.length; i++) {
+    if (words[i].length > maxLength) {
+      maxLength = words[i].length;
+    }
+  }
+
+  return maxLength;
+}
+
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+
+/*Hints
+Hint 1
+You should split the string into an array of words.
+
+Hint 2
+You will need to figure out a way to keep track globally of the greatest current length.
+
+Hint 3
+Remember how to get the length of elements on the array? Array[index].length.
+
+
+*/

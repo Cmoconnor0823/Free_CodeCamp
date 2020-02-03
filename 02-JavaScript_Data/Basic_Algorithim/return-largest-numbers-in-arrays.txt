@@ -1,0 +1,34 @@
+function largestOfFour(arr) {
+  // You can do this!
+  var results = [];
+  for (var n = 0; n < arr.length; n++) {
+    var largestNumber = arr[n][0];
+    for (var sb = 1; sb < arr[n].length; sb++) {
+      if (arr[n][sb] > largestNumber) {
+        largestNumber = arr[n][sb];
+      }
+    }
+
+    results[n] = largestNumber;
+  }
+
+  return results;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+
+/*
+Hints
+Hint 1
+You will get an array that contains sub arrays of numbers and you need to return an array with the largest number from each of the sub arrays. You will need to keep track of the array with the answer and the largest number of each sub-array.
+
+Hint 2
+You can work with multidimensional arrays by Array[Index][SubIndex]
+
+Hint 3
+Pay close attention to the timing of the storing of variables when working with loops
+
+
+
+*/
