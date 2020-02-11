@@ -1,0 +1,24 @@
+function Bird() {
+  let weight = 15;
+
+  this.getWeight = function(){
+    return weight;
+  };
+}
+
+let sparrow = new Bird();
+sparrow.getWeight();
+
+//Tests begin here
+console.log(Bird);
+console.log(sparrow.getWeight());
+
+/* the following code returns 15 but does not pass, Why?
+function Bird() {
+  this.weight = 15;
+
+  this.scale = function(){
+    return this.weight;
+  };
+}
+*/

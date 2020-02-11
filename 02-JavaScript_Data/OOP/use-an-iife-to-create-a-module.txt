@@ -1,0 +1,18 @@
+let funModule = (function (){
+  return{
+
+// The 2 given mixins are below
+ isCuteMixin: function(obj) {
+  obj.isCute = function() {
+    return true;
+  };
+},
+singMixin: function(obj) {
+  obj.sing = function() {
+    console.log("Singing to an awesome tune");
+  };
+}
+// End of mixins
+ }
+})();
+console.log(funModule)
