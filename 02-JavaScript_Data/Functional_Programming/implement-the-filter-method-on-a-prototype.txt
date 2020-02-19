@@ -1,0 +1,21 @@
+// the global Array
+var s = [23, 65, 98, 5];
+
+//create my own my Filter method on the array prototype
+Array.prototype.myFilter = function(callback){
+  var newArray = [];
+  // Add your code below this line
+ this.forEach(function(num) {
+    if (callback(num) == true) {
+      newArray.push(num);
+    }
+  });
+  // Add your code above this line
+  return newArray;
+
+};
+
+// now ust the created my Filter method created above
+var new_s = s.myFilter(function(item){
+  return item % 2 === 1;
+});

@@ -1,0 +1,40 @@
+// the global variable
+var bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+
+/* This function should add a book to the list and return the list */
+// New parameters should come before bookName
+
+// Add your code below this line
+function add (arr, bookName) {
+ let myBookList = [...arr]; // Copy the bookList array to a new array.
+  myBookList.push(bookName); // Add bookName parameter to the end of the new array.
+  return myBookList; // Return the new array.
+  console.log(myBookList, "my book list add")
+  // Add your code above this line
+}
+
+/* This function should remove a book from the list and return the list */
+// New parameters should come before the bookName one
+
+// Add your code below this line
+function remove (arr, bookName) {
+   // Copy the bookList array to a new array.
+  let myBookList = [...arr]; 
+   // Check whether the bookName parameter is in new array.
+  if (myBookList.indexOf(bookName) >= 0) {
+    // Remove the given paramater from the new array.
+    myBookList.splice(myBookList.indexOf(bookName), 1);
+    // Return the new array.
+    return myBookList;
+console.log(myBookList, "mine remove");
+    // Add your code above this line
+    }
+}
+
+var newBookList = add(bookList, 'A Brief History of Time');
+var newerBookList = remove(bookList, 'On The Electrodynamics of Moving Bodies');
+var newestBookList = remove(add(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies');
+
+console.log(bookList);
+console.log(newBookList);
+console.log(newestBookList);
