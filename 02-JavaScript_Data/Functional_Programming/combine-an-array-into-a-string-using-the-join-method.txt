@@ -1,0 +1,12 @@
+function sentensify(str) {
+  // Add your code below this line
+//str.split() turns the string into an array
+//(/\W/) removes the dashes
+//.join recreates the string
+//(" ") adds a space between each word to form the sentence
+return str.split(/\W/).join(" ");
+
+  // Add your code above this line
+}
+sentensify("May-the-force-be-with-you");
+console.log(sentensify("May-the-force-be-with-you"))
