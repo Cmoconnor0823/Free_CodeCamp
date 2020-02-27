@@ -1,0 +1,48 @@
+/*Hints
+Hint 1
+You may use for loop or the Array.prototype.filter method.
+
+Hint 2
+Try to use the Object.prototype.hasOwnProperty method to know if the property name exists in an object (as its own property).
+
+Hint 3
+Check equivalence of Object in collection with Object passed as second parameter to whatIsInAName function.
+
+
+*/
+
+
+
+function whatIsInAName(collection, source) {
+  // What's in a name?
+
+  // Only change code below this line
+
+  //keys will hold the keys from the source object 
+  var srcKey = Object.keys(source);
+  console.log(srcKey, "the keys from the source object");
+
+// The filter method does most of the work here look it up in the mdn
+
+  return collection.filter(function(obj){
+    // begin to loop through each key in the collection object that match the source keys
+    for(var key of srcKey){
+      console.log(key);
+
+      //check to see if the key in source does not exist in the collection or if the value of the collection key is not == to source key
+        if(!obj.hasOwnProperty(key)|| obj[key] !== source[key])
+        return false;
+    }
+     return true;
+  });
+
+  // Only change code above this line
+  return arr;
+}
+
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+
+//Tests
+console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }), "test 1");
+
+console.log(whatIsInAName([{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }], { "apple": 1 })," test 2")

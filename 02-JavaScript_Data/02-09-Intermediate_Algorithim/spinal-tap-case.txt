@@ -1,0 +1,46 @@
+/* Hints
+Hint 1
+Create a regular expression for all white spaces and underscores.
+
+Hint 2
+You will also have to make everything lowercase.
+
+Hint 3
+The tricky part is getting the regular expression part to work, once you do that then just turn the uppercase to lowercase and replace spaces with underscores using replace().
+
+
+*/
+
+
+
+function spinalCase(str) {
+  // Adds a space afer a lowercase letter next to an uppercase letter (needed for the thisIsSpinalTap test and the AllThe-small Things test)
+  str = str.replace(/([a-z])([A-Z])/g, "$1 $2");
+  console.log(str, "replace 1")
+  // Split on whitespace and underscores and join with dash
+  return str
+    .toLowerCase()
+    .split(/(?:_| )+/)
+    .join("-");
+}
+
+// test here
+spinalCase("This Is Spinal Tap");
+console.log(spinalCase('This Is Spinal Tap'));
+
+
+
+/*OR
+return str
+  //First Split the string at one of the following conditions (converted to an array)
+//a whitespace character [\s] is encountered
+//underscore character [_] is encountered
+//or is followed by an uppercase letter [(?=[A-Z])]
+
+    .split(/\s|_|(?=[A-Z])/)
+    // Join the created array using a hyphen (-)
+    .join("-")
+    //Lowercase the resulting string
+    .toLowerCase();
+
+*/

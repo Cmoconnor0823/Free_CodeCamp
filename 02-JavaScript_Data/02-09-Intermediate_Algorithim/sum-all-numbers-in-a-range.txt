@@ -1,0 +1,61 @@
+
+/*Hints
+Hint 1
+Use Math.max() to find the maximum value of two numbers.
+
+Hint 2
+Use Math.min() to find the minimum value of two numbers.
+
+Hint 3
+Remember to that you must add all the numbers in between so this would require a way to get those numbers.
+
+
+*/
+
+
+
+
+
+function sumAll(arr) {
+
+  //First create a variable to store the max number between two numbers in the array
+  var max = Math.max(arr[0], arr[1]);
+
+  //Then create a variable to store the min number between two numbers in the array
+  var min = Math.min(arr[0], arr[1]);
+
+  //Create a holding spot for adding the numbers together
+  var holdingSpot = 0;
+
+  for (var i = min; i <= max; i++) {
+    holdingSpot += i;
+  }
+  return holdingSpot;
+}
+
+sumAll([1, 4]);
+console.log(sumAll([1, 4]));
+
+
+
+/* OR
+const sumAll = arr => {
+  // Buckle up everything to one!
+  const startNum = arr[0];
+  const endNum = arr[1];
+
+  // Get the count of numbers between the two numbers by subtracting them and add 1 to the absolute value.
+  // ex. There are |1-4| + 1 = 4, (1, 2, 3, 4), 4 numbers between 1 and 4.
+  const numCount = Math.abs(startNum - endNum) + 1;
+
+  // Using Arithmetic Progression summing formula
+  const sum = ((startNum + endNum) * numCount) / 2;
+  return sum;
+};
+
+
+The formula for calculating the sum of a continuous range is “(startNum + endNum) * numCount / 2”.
+arr[0] and arr[1] can either be startNum or endNum, order doesn’t matter.
+We can get the count of numbers in range by “Math.abs(arr[0] - arr[1]) + 1”.
+Applying the formula by plugging in the numbers.
+*/
