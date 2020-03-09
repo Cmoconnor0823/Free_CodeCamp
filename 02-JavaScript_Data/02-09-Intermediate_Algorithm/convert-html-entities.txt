@@ -1,0 +1,72 @@
+/*
+You have to create a program that will convert HTML entities from string to their corresponding HTML entities. There are only a few so you can use different methods
+
+Hint 1
+You can use regular Expressions however there are possible solutions without using them.
+Hint 2
+You will benefit from a chart with all the html entities so you know which ones are the right ones to put.
+Hint 3
+You should separate the string and work with each character to convert the right ones and then join everything back up.
+
+*/
+
+
+function convertHTML(str) {
+  // Use Object Lookup to declare as many HTML entities as needed, to use the Lookup functionality and easily find the characters (Look for the bracket notation below).
+  const htmlEntities = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&apos;"
+  };
+  // Using a regex, replace characters with it's corresponding html entity
+  return str.replace(/([&<>\"'])/g, match => htmlEntities[match]);
+}
+
+// test here
+convertHTML("Dolce & Gabbana");
+console.log(convertHTML("Dolce & Gabbana"));
+
+
+/*OR
+
+function convertHTML(str) {
+  // Assign text to str.split(''), which creates an array containing each individual character in the passed in string.
+
+  var text = str.split("");
+
+  // Pass each character in the newly created  text array into a switch() statement.
+//Replace the HTML entities with their corresponding HTML entity string 
+
+  for (var i = 0; i < text.length; i++) {
+    switch (text[i]) {
+      case "<":
+        text[i] = "&lt;";
+        break;
+      case "&":
+        text[i] = "&amp;";
+        break;
+      case ">":
+        text[i] = "&gt;";
+        break;
+      case '"':
+        text[i] = "&quot;";
+        break;
+      case "'":
+        text[i] = "&apos;";
+        break;
+    }
+  }
+//  convert the array of characters into a string to be returned.
+
+  text = text.join("");
+  return text;
+}
+
+//test here
+convertHTML("Dolce & Gabbana");
+console.log(convertHTML("Dolce & Gabbana"));
+
+
+*/

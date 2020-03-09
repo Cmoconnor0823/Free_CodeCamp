@@ -1,0 +1,31 @@
+function fearNotLetter(str) {
+  var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  var len = str.length;
+  // create a var to hold the starting letter of the alpha string
+  var start = alphabet.indexOf(str[0]);
+  
+  // start at the first letter and loop through the length of the string
+  for(var i = start; i < start + len; i++){
+    // if the string does not contain the next letter in order in the alphabet, return the missing letter
+    if(!str.includes(alphabet[i])){
+      return alphabet[i];
+    }
+  }
+  return undefined;
+}
+fearNotLetter("abce");
+
+
+/*
+Hint 1
+You will need to convert from character to ASCII code using the two methods provided in the description.
+
+Hint 2
+You will have to check for the difference in ASCII code as they are in order. Using a chart would be very helpful.
+
+Hint 3
+You will need to figure out where the missing letter is, along with handling the case that there is not missing letter as it needs an specific return value.
+
+
+
+*/
