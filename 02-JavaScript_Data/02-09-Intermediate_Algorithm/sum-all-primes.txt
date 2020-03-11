@@ -1,0 +1,40 @@
+/*
+The explanation for this problem is very simple. You will generate a list of prime numbers up to the number you are given as a parameter. Then you need to add them all up and return that value. The tricky part is on generating the list of prime numbers. I suggest you find a code or a good math algorithm that you can turn into code.
+
+Hint 1
+Generate a list of all the numbers up to and including the one you got as a parameter. This will be needed to determine which numbers are prime or not.
+
+Hint 2
+Check this link 519 if you prefer to find a solution for finding primes, or try learning and implementing your own Sieve of Eratosthenes 1.8k
+
+Hint 3
+This problem is hard if you have to create your own code to check for primes, so don’t feel bad if you had to use someone’s code for that bit. Either way, you are most likely using array, so once you generate an array of primes, then just add them all up and return the number you get.
+*/
+
+function sumPrimes(num) {
+    // first create a variable to hold the found prime numbers
+    var prime = []; 
+    //loop through all numbers starting at 2, and counting up to and including the given "num"
+    for(var i=2; i<=num; i++){
+  //create a holding variable
+      var count = 0;  
+//loop each number between 1 and i-being a number between 2 and our given num      
+        for(var j=1; j<=i; j++){ 
+   //check if i is divisible by any number smaller or equal to itself (j)   
+            if(i%j===0){ 
+     //and increment count each time 
+              count++;              
+          }      
+        }
+ //prime numbers have only 2 divisors so count===2
+      if(count===2){ 
+  //push it to prime array          
+        prime.push(i);                
+      }
+    }
+//reduce to add all the numbers held in the prime array and return the total number.
+return prime.reduce((a,b)=> a+b); 
+}
+
+
+sumPrimes(10);

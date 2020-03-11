@@ -1,0 +1,32 @@
+/*
+Hints
+Hint 1
+Create an array with all the numbers that are missing from the original array to make it easier to check when having to check for even division.
+
+Hint 2
+You can use remainder operator (%) to check if the reminder of a division is 0, which means it is evenly divisible.
+
+Hint 3
+If you sort the array from greatest to smallest, then you can use the first two numbers as a first check for the smallest common multiple. This is because they are more likely to be the smallest common multiple than the lower numbers.
+*/
+
+function smallestCommons(arr) {
+// create 2 variables, one to hold the largest number in the given array, and one to hold the smallest number in the array
+  var max = Math.max(arr[0], arr[1]);
+  var min = Math.min(arr[0], arr[1]);
+  // create a variable to hold the smallest common multiple starting with the larger value
+  var smMulti = max;
+// create a for loop that will start at the larger value and count down till the smaller value is reached
+  for(var i = max; i >= min; i--){
+ // check to see if there is a remainder when dividing the smallest common multiple by the next number counting down from the max, if the is a remainder add the number we are currently iterating through to the smallest common multiple and reset i to the next lowest number
+    if(smMulti % i !== 0){
+      smMulti += max; 
+      i = max;
+    } 
+  }
+// if there is no remainder found when dividing our smallest common variable return the smallest common multiple
+  return smMulti;  
+}
+
+
+smallestCommons([1,5]);
