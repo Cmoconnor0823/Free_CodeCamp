@@ -1,0 +1,26 @@
+/*
+Hint 1
+Remember to iterate through the first argument to check each object.
+
+Hint 2
+Only if all of them are truthy will we return true, so make sure all of them check.
+
+Hint 3
+You could use loops or callback functions, there are multiple ways to solve this problem.
+*/
+
+function truthCheck(collection, pre) {
+  for (var i = 0; i < collection.length; i++ ) {
+    console.log(i, collection[i]);
+    if (!collection[i][pre]) {
+      console.log(collection[i][pre]);
+      return false;
+    }
+  }
+  
+  return true;
+  
+
+}
+
+truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");

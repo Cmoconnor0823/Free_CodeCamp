@@ -1,0 +1,51 @@
+/*
+It can be quite complicated to understand what needs to be done. There are always many ways to do something when coding but regardless of the algorithm used, we have to create a program that does the following:
+
+It has to add two numbers passed as parameters and return the sum.
+It has to check if any of the numbers are actual numbers, otherwise return undefined and stop the program right there.
+It has to check if it has one or two arguments passed. More are ignored.
+If it has only one argument then it has to return a function that uses that number and expects another one, to then add it.
+
+Hint 1
+Every time you deal with an argument, you have to check if it is a number or not. For this a function that handles this task will save you repeated code.
+
+Hint 2
+When working on the case that it needs to return the function, it is wise to check if the first and only argument is a number again and base the code on that.
+
+Hint 3
+In the case that only one argument was passed, do not worry about how to prompt input for the second one, just make the function definition properly and things will work out the way they should.
+*/
+
+
+function addTogether() {
+  // First create a for... of loop to iterate through the number of given arguments
+    for (let i of arguments) {
+      // create a variable to store the argument the code is iterating through
+        var oneNumber = i
+        console.log(oneNumber);
+        if (typeof i !== "number") {
+          //if the given argument is not a number return undefined
+            return undefined
+        }
+    }
+    // if we have 2 arguments that are numbers add them together and return the sum
+    if (arguments.length === 2) {
+        return arguments[0] + arguments[1];
+    } 
+    else {
+    // if we are only given one number as an argument return the below sum function that uses the given single number 
+        return function sum(num) {
+          // this first checks to see if the paramenter poassed to the sum function is a number
+            if (typeof num !== "number") {
+              // if it is not a number return undefined
+                return undefined
+            } else {
+              // else add the original single argument number with a second number given to the function sum that would be returned from the function addTogether
+            return oneNumber + num;
+            }
+        };
+    }
+}
+
+
+addTogether(2,3);
