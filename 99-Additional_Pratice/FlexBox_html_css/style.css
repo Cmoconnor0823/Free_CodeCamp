@@ -1,0 +1,21 @@
+/*Styles all containers share */
+nav, main, header, section, aside, footer{
+    margin: 0;
+    padding:rem-cal(20);
+    border:1px solid black;
+    color: #ffffff;
+}
+/*Nav Bar*/
+nav{
+    background: #000000;
+}
+main {
+    background:#ffaa00;
+}
+.header {
+    background:#03a9fa;
+}
+
+
+
+/*Footer*/
