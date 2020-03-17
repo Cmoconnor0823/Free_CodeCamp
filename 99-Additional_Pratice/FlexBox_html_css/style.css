@@ -1,21 +1,60 @@
 /*Styles all containers share */
 nav, main, header, section, aside, footer{
     margin: 0;
-    padding:rem-cal(20);
+    padding:2rem;
     border:1px solid black;
     color: #ffffff;
 }
 /*Nav Bar*/
 nav{
+    display:flex;
     background: #000000;
+    justify-content: center;
+    list-style: none;
+    font-weight: bold;
 }
+li{
+    padding:.5em;
+}
+    /* unvisited link */
+a:link {
+    color: red;
+}
+  /* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
 main {
     background:#ffaa00;
 }
 .header {
     background:#03a9fa;
 }
-
-
-
+.hero{
+    background:#d22b1f;
+}
+.content {
+    background: #129a22;
+}
+.sidebar{
+    border:1px solid #000000;
+    background: #673ab7;
+}
 /*Footer*/
+.footer{
+    border: 1px solid #000000;
+    background: #616161;
+}
+
+@media screen and (min-width:640px){
+    .flex-container{
+        display: flex;
+    }
+    .content{
+        flex: 1;
+    }
+    .sidebar{
+        flex:0 1 300px;
+    }
+}
