@@ -4,6 +4,8 @@ First copy over the entire Tic-Tac-Toe-Template folder to your documents or your
 Next open the Tic-Tac-Toe folder in your code-editior, and go to the top and click Terminal,
 and select 'New Terminal'. This will open a terminal at the bottom of your code editor, and you 
 should see a line of thext that looks simmilar to 
+PS C:\Users\PCCA\Documents\tic-tac-toe-Template>
+
 
 Now in the terminal you opened, type in the following:  npm start
 
@@ -16,3 +18,11 @@ with Overview (starting on the bottom of page 4 of the pdf).
 If your curious how you would begin to create a react app from scratch feel free to read the
 beginning of the tutorial, Option 2: Local Development Environment (starts on page 3). 
 Without a connection to the internet you will have to start with the provided template file.
+
+If you finish quickly try implementing the extra features listed at the end of the tutorial.
+
+If you run into errors:
+ 
+Finish the step you are on 
+Double check for syntax errors
+Make sure you are working in the correct spot in your code

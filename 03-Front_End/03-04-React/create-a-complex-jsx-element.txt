@@ -1,0 +1,10 @@
+// write your code here
+const JSX = (<div>
+<h1> Hello World</h1>
+<p>Now we are cooking with React!</p>
+<ul>Unordered list
+<li>Item one</li>
+<li>Item two</li>
+<li>Item three</li>
+</ul>
+</div>)
