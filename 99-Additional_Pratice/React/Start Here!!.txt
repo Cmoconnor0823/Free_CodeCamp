@@ -1,0 +1,18 @@
+###Instructions for React Tic-Tac-Toe
+First copy over the entire Tic-Tac-Toe-Template folder to your documents or your desktop.
+
+Next open the Tic-Tac-Toe folder in your code-editior, and go to the top and click Terminal,
+and select 'New Terminal'. This will open a terminal at the bottom of your code editor, and you 
+should see a line of thext that looks simmilar to 
+
+Now in the terminal you opened, type in the following:  npm start
+
+A browser window should open or if you type http://localhost:3000 in the browser, you should
+see an empty tic-tac-toe field.
+
+If you've gotten this far Awesome!!! Now you can start following the tutorial starting 
+with Overview (starting on the bottom of page 4 of the pdf).
+
+If your curious how you would begin to create a react app from scratch feel free to read the
+beginning of the tutorial, Option 2: Local Development Environment (starts on page 3). 
+Without a connection to the internet you will have to start with the provided template file.
