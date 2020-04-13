@@ -1,0 +1,34 @@
+/*
+Hint 1
+Use the method Object.assign({}, obj1, obj2) in return. Pass state as obj1.
+
+Hint 2
+The obj2 should be the updated {key: value} pair of your state.
+
+*/
+
+
+const defaultState = {
+  user: 'CamperBot',
+  status: 'offline',
+  friends: '732,982',
+  community: 'freeCodeCamp'
+};
+
+const immutableReducer = (state = defaultState, action) => {
+  switch(action.type) {
+    case 'ONLINE':
+      // don't mutate state here or the tests will fail
+      return Object.assign({}, state, { status: "online" });
+    default:
+      return state;
+  }
+};
+
+const wakeUp = () => {
+  return {
+    type: 'ONLINE'
+  }
+};
+
+const store = Redux.createStore(immutableReducer);

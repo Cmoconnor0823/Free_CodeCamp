@@ -1,0 +1,50 @@
+/*
+Let’s break the instructions down to figure exactly what it’s asking.
+
+Write a callback function that increments the global variable count every time the store receives an action, and pass this function in to the store.subscribe() method.
+
+We can summarize these steps into small chunks:
+
+1. write a callback function
+2. increment the global variable count
+3. pass function to store.subscribe() method.
+Awesome! Now let’s review some of the basics again.
+
+What is a “callback function” in plain English?
+A callback function is simply a function that get’s called after another function is done being executed. 
+
+How do you increase a number variable?
+We can do this by using the “+=” operator.
+
+How do you pass a function to a method?
+We can pass a function to a method the same way we might pass a variable to a method. Just pass it in as an argument!
+*/
+
+
+
+const ADD = 'ADD';
+
+const reducer = (state = 0, action) => {
+  switch(action.type) {
+    case ADD:
+      return state + 1;
+    default:
+      return state;
+  }
+};
+
+const store = Redux.createStore(reducer);
+
+// global count variable:
+let count = 0;
+
+// change code below this line
+  store.subscribe( () => {count++} );
+// change code above this line
+
+store.dispatch({type: ADD});
+console.log(count);
+store.dispatch({type: ADD});
+console.log(count);
+store.dispatch({type: ADD});
+console.log(count);

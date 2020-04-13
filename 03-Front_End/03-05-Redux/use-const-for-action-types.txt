@@ -1,0 +1,53 @@
+/*Note!!
+Using a const for Action Types has a big advantage over using strings.
+
+Accidental mispellings of strings can lead to errors.
+
+You may spell type: 'LOGIN' correctly in your action creator but mispell type: 'LOGN' in your reducer 
+*/
+
+// change code below this line
+const LOGIN = "LOGIN";
+const LOGOUT = "LOGOUT";
+// change code above this line
+
+const defaultState = {
+  authenticated: false
+};
+
+const authReducer = (state = defaultState, action) => {
+
+  switch (action.type) {
+// update here
+    case LOGIN:
+      return {
+        authenticated: true
+      }
+// update here
+    case LOGOUT:
+      return {
+        authenticated: false
+      }
+
+    default:
+      return state;
+
+  }
+
+};
+
+const store = Redux.createStore(authReducer);
+
+const loginUser = () => {
+  return {
+    // update here
+    type: LOGIN
+  }
+};
+
+const logoutUser = () => {
+  return {
+    // update here
+    type: LOGOUT
+  }
+};

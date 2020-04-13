@@ -1,0 +1,48 @@
+/*
+Hint 1
+The best way to solve this challenge is by reviewing previous redux lessons particularly the following:
+
+Use const for Action Types 
+Use a Switch Statement to Handle Multiple Actions 
+Define an Action Creator 
+Handle an Action in the Store 
+Create a Redux Store 
+*/
+
+
+// define a constant for increment action types
+const INCREMENT = "INCREMENT"; 
+
+// define a constant for decrement action types
+const DECREMENT = "DECREMENT"; 
+
+ // define the counter reducer which will increment or decrement the state based on the action it receives
+const counterReducer = (state = 0 , action) => {
+  switch (action.type) {
+    case INCREMENT:
+    return (state += 1);
+
+    case DECREMENT:
+    return (state -= 1);
+
+    default:
+    return state;
+  }
+};
+
+// define an action creator for incrementing
+const incAction = () => {
+  return {
+    type: INCREMENT
+  };
+}; 
+
+// define an action creator for decrementing
+const decAction = () => {
+  return {
+    type: DECREMENT
+  };
+}; 
+
+// define the Redux store here, passing in your reducers
+const store = Redux.createStore(counterReducer); 
