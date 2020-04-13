@@ -1,0 +1,50 @@
+/*
+Hint 1
+It is easier when you know how much money is in your register beforehand. For this it is recommended to have a function to assign this information to a variable. Then you can see if you have enough money to complete the transaction and return change, or if you should close the register.
+
+Hint 2
+This problem is easier when you know the value of each bill or coin you are working with, rather than just the sum of each in the register. For example, it’s useful to know that a nickel is worth .05, along with the fact that you have $2.05 worth of nickels in the cash register.
+
+Hint 3
+You will have to get as much change from one type of bill or coin before moving to the next, from greater to lesser value. Keep going until you have calculated all the change due.
+
+*/
+
+function checkCashRegister(price, cash, cid) {
+  let change=cash-price;
+  let database={"ONE HUNDRED":100,"TWENTY":20,"TEN":10,"FIVE":5,"ONE":1,"QUARTER":0.25,"DIME":0.1,"NICKEL":0.05,"PENNY":0.01};
+  let result=[];
+  let remain=0;
+  // First logical block for recursion
+  let func=function(money,base,balance){
+    let num=Math.floor(money/database[base]);
+    let newMoney=money;
+    if(num*database[base]>=balance){
+      newMoney=(money*1000-balance*1000)/1000;
+      result.push([base,balance]);
+    }else if(num*database[base]<balance && num!=0){
+      newMoney=(money*1000-num*database[base]*1000)/1000;
+      result.push([base,num*database[base]]);
+      remain=(remain*1000+balance*1000-num*database[base]*1000)/1000;
+    }else if(num==0){
+      newMoney=money;
+      remain=(remain*1000+balance*1000)/1000;
+    }
+    return newMoney;   
+  }
+  // recursion as below
+  for(let i=8;i>=0;i--){
+    change=func(change,cid[i][0],cid[i][1]);
+  }
+  // Second logical block
+  if(change>0){
+    return {"status":"INSUFFICIENT_FUNDS","change":[]};
+  }else if(change==0 && remain==0){
+    return {"status":"CLOSED","change":cid};
+  }else if(change==0 && remain>0){
+    return {"status":"OPEN","change":result};
+  }
+}
+
+checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
+console.log(checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]))

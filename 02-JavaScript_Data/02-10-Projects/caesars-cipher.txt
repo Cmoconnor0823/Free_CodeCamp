@@ -1,0 +1,36 @@
+/*
+Hints
+Hint 1
+Use String.charCodeAt() to convert the English character to ASCII.
+
+Hint 2
+Use String.fromCharCode() to convert ASCII to English character.
+
+Hint 3
+Leave anything that doesn’t come between A-Z as it is.
+
+*/
+
+function rot13(str) {
+ var arr = str.split('');
+  var newArray = [];
+  var cipheredCode = '';
+  
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i].charCodeAt() > 64 && arr[i].charCodeAt() < 78 ) {
+      newArray.push(arr[i].charCodeAt() + 13);
+    } 
+    if (arr[i].charCodeAt() > 77 && arr[i].charCodeAt() < 91 ) {
+      newArray.push(arr[i].charCodeAt() - 13);
+    } 
+    if(arr[i].charCodeAt() < 64){
+      newArray.push(arr[i].charCodeAt());
+    }
+  }
+  
+    cipheredCode += String.fromCharCode.apply(null, newArray);
+       
+    return cipheredCode;
+}
+
+rot13("SERR PBQR PNZC");

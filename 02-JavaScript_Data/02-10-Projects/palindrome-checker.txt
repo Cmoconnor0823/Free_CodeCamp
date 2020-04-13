@@ -1,0 +1,15 @@
+function palindrome(str) {
+  var check = str.replace(/[\W_]/g, '').toLowerCase();
+  var strReverse = check.split('').reverse().join('');
+
+  if (strReverse === check) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+
+palindrome("_eye");
+console.log(palindrome("_eye"))
