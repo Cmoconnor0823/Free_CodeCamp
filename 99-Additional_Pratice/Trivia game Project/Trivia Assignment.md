@@ -1,4 +1,4 @@
-# JavaScript Assignment 2
+# Trivia Game Assignment
 
 ### Overview
 
@@ -16,9 +16,10 @@ In this assignment, You'll create a Trivia game using JavaScript for the logic a
 4. Inside `assets`, create three folders: `css`, `javascript`, `images`
 
    * In your `css` folder, create a `style.css` file.
-   * In your `javascript` folder, First copy over the jQuery file provided. 
+   * In your `javascript` folder, First COPY over the jQuery.min file provided. 
       * Then create a new  `app.js` file; here you'll write all of your JavaScript and jQuery.
    * In your `images` folder, save whatever images you'd like to use in this exercise. 
+   * Don't forget to link all your files to your HTML page
 
 6. Choose a game to build from your options below. 
 
