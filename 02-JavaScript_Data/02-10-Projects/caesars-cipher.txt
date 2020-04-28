@@ -1,4 +1,4 @@
-/*
+﻿/*
 Hints
 Hint 1
 Use String.charCodeAt() to convert the English character to ASCII.
@@ -34,3 +34,29 @@ function rot13(str) {
 }
 
 rot13("SERR PBQR PNZC");
+
+// OR
+
+  function rot13(str) {
+    var abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+       var answer = "";
+       var a = 0;
+ 
+   for(var i=0 ; i<str.length ;i++ ){
+     if(abc.indexOf(str[i])>=0&&abc.indexOf(str[i])<=12){
+       a = abc.indexOf(str[i])+13;
+       answer+=abc[a];
+     }
+     else if(abc.indexOf(str[i])>=13&&abc.indexOf(str[i])<=25){
+       a = abc.indexOf(str[i])-13;
+       answer+=abc[a];
+     }
+     else{
+       answer+=str[i];
+     }
+   }  
+   return answer
+ }
+ 
+ rot13("SERR PBQR PNZC");
+ console.log( rot13("SERR PBQR PNZC"))
