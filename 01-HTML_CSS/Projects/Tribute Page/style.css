@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(129, 0, 0, 0.856);
+    width: 100vw;
+}
+figure {
+    position: relative;
+}
+figure figcaption {
+    color: black;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    text-align: center;
+    padding: 15px;
+    font-style: oblique;
+    font-size: 1rem;
+    mix-blend-mode: soft-light;
+}
+a {
+    color: black;
+    left: 30%;
+    text-align: center;
+    padding: 15px;
+    font-style: oblique;
+    font-size: 1rem;
+    mix-blend-mode: soft-light;  
+}
+#img-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#image{
+    max-height: 40%;
+    max-width: 80%;
+    padding: 2%;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.container{
+    border: 5px groove gold;
+    padding: 30px;
+    margin: 5px;
+    width: 60%; 
+}
+
+.list{
+    margin: 5%;
+}
