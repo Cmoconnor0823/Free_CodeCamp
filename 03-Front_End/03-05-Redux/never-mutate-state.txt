@@ -1,4 +1,4 @@
-/*
+﻿  /*
 Hints
 Hint 1
 const means: it cannot change through re-assignment, and it cannot be re-declared.

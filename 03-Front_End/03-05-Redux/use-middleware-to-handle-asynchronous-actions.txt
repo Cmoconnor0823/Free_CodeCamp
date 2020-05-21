@@ -15,7 +15,9 @@ dispatch(requestingData());
         users: ['Jeff', 'William', 'Alice']
       };
       // dispatch received data action here
+
       dispatch(receivedData(data));
+
     }, 2500);
   }
 };
