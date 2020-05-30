@@ -1,10 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    --color-white: #f3f3f3;
-    --color-darkblue: #1b1b32;
-    --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
-    --color-green: #37af65;
+    --color-white: #f2f2f2;
+    --color-lightorange: #F2A950;
+    --color--orange-alpha: rgba(217, 117, 30, 0.8);
+    --color-red: #8C1C03;
+    --color-brown: #400E03;
 }
 
 body {
@@ -12,7 +13,8 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.4;
-    color: var(--color-darkblue);
+    background-color: var(--color--orange-alpha);
+    color: var(--color-brown);
     margin: 0;
 }
 
@@ -25,10 +27,18 @@ label {
 
   
 form {
-    background: var(--color-darkblue-alpha);
+    background: var(--color-lightorange);
     margin: 3.5rem 2.5rem;
     padding: 2.5rem 5.5rem;
     border-radius: 0.25rem;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
 
 }
 
@@ -38,13 +48,20 @@ form {
 
 /* The hero image */
 .hero-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("baked-bread.jpg");
+    background-image: linear-gradient(rgba(242, 169, 80, 0.5), rgba(242, 169, 80, 0.3)), url("baked-bread.jpg");
     min-height: 10rem;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     border-radius: 0.25rem;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
   }
   
   .hero-text {
@@ -53,10 +70,36 @@ form {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: var(--color-brown);
   }
   .hero-text-des {
     top: 80%;
+  }
+
+
+
+  .subButton{
+    border: none;
+    background: var(--color--orange-alpha);
+    color: var(--color-red) !important;
+    font-size: large;
+    font-weight: 100;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+  }
+
+  .subButton:hover {
+    color: var(--color-brown) !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px;
+    background: none;
+    box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.3s ease 0s;  
   }
 
 @media (min-width: 576px) {
