@@ -11,15 +11,16 @@
 <body>
     <main> 
         <div class="container hero-img">
-        <h1 id="title" class="hero-text">Pastry Survey</h1>
-        <p id="description" class=" hero-text hero-text-des">Add a description here</p>
+        <h1 id="title" class="hero-text">Catering Pastry Survey</h1>
+        <p id="description" class=" hero-text hero-text-des">Fill out the form below to start planning your next event!</p>
         </div>
         <form id="survey-form">
             <div class="form-group">
                 <label id="name-label" for="name">
                    Your Name
                 </label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your full name" required />
+                   <input type="text" name="name" id="name" class="form-control" 
+                   placeholder="Enter your full name" required />
             </div>
             <div class="form-group">
                 <label id="email-label" for="email">
@@ -31,108 +32,99 @@
             <div class="form-group">
                 <label id="number-label" for="number">
                     Number of guests
+                </label>
                     <span class="clue">(optional)</span>
                     <input type="number" name="guests" id="number" min="1" max="99" class="form-control" placeholder="#Guests" />
-                </label>
                 
                 <label id="number-label" for="number">
                     Number of Servings
+                </label>
                     <span class="clue">(optional)</span>
                     <input type="number" name="servings" id="number" min="12" max="99" class="form-control" placeholder="#Servings" />
-                </label>
             </div>
+            
             <div class="form-group">
-                <p>Which option best describes your current role?</p>
-                <select id="dropdown" name="role" class="form-control" required>
-                    <option disabled selected value>Select current role</option>
-                    <option value="student">Student</option>
-                    <option value="job">Full Time Job</option>
-                    <option value="learner">Full Time Learner</option>
-                    <option value="preferNo">Prefer not to say</option>
-                    <option value="other">Other</option>
+                <p>Which option best describes your type of event?</p>
+                <select id="dropdown" name="event" class="form-control" required>
+                    <option disabled selected value>Select type of event</option>
+                    <option value="dinner">Dinner Party</option>
+                    <option value="birthday">Birthday Party</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="retire">Retirement Party</option>
+                    <option value="baby">Baby Shower</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <p>Would you recommend freeCodeCamp to a friend?</p>
+                <p>Are you flexible on your event date</p>
                 <label>
-                    <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked />
-                    Definitely
+                    <input name="date-flex" value="yes" type="radio" class="input-radio" />
+                    Yes
                 </label>
                 <label>
-                    <input name="user-recommend" value="maybe" type="radio" class="input-radio" />
-                    Maybe
+                    <input name="date-flex" value="possibly" type="radio" class="input-radio"checked />
+                    Yes, but only on specific dates
                 </label>
 
                 <label>
-                    <input name="user-recommend" value="not-sure" type="radio" class="input-radio" />
-                    Not sure
+                    <input name="date-flex" value="no" type="radio" class="input-radio" />
+                    No
                 </label>
             </div>
 
             <div class="form-group">
                 <p>
-                    What is your favorite feature of freeCodeCamp?
+                    What is your price range?
                 </p>
-                <select id="most-like" name="mostLike" class="form-control" required>
-                    <option disabled selected value>Select an option</option>
-                    <option value="challenges">Challenges</option>
-                    <option value="projects">Projects</option>
-                    <option value="community">Community</option>
-                    <option value="openSource">Open Source</option>
+                <select id="price-range" name="priceRange" class="form-control" required>
+                    <option disabled selected value>Select a range below</option>
+                    <option value="budget">Budget $50 - $100</option>
+                    <option value="select">Select $100 - $200</option>
+                    <option value="premium">Premium $200 - $500</option>
+                    <option value="platinum">Platinum $500 +</option>
                 </select>
             </div>
+            
 
             <div class="form-group">
                 <p>
-                    What would you like to see improved?
-                    <span class="clue">(Check all that apply)</span>
+                    Which type of pastries would you like avaiable at your tasting
+                    <span class="tasting">(Check all that apply)</span>
                 </p>
 
                 <label>
-                    <input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox" />
-                    Front-end Projects
+                    <input name="taste" value="breadBasket" type="checkbox" class="input-checkbox" />
+                    Bread Basket Options
                 </label>
                 <label>
-                    <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox" />
-                    Back-end Projects
+                    <input name="taste" value="cookies" type="checkbox" class="input-checkbox" />
+                    Classic Cookies- (A selection of family favorites like Chocolate Chip, Peanut Butter, and Iced Oatmeal)
                 </label>
                 <label>
-                    <input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox" />
-                    Data Visualization
+                    <input name="taste" value="premiumCookies" type="checkbox" class="input-checkbox" />
+                    Premium Cookies- (A selection of elegant, decadent cookies like our French Macarons, Biscotti, and Linzer Cookies)
                 </label>
                 <label>
-                    <input name="prefer" value="challenges" type="checkbox" class="input-checkbox" />
-                    Challenges
+                    <input name="taste" value="cakes" type="checkbox" class="input-checkbox" />
+                    Classic Cakes- (A tasting selection of family favorites like Chocolate, Birthday Cake, and Strawberry)
                 </label>
                 <label>
-                    <input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox" />
-                    Open Source Community
+                    <input name="taste" value="premiumCakes" type="checkbox" class="input-checkbox" />
+                    Premium Cakes- (A selection of elegant, decadent cakes like our French Vanilla Bean, Chocolate Mousse, and Seasonal Fruit Flavors)
                 </label>
                 <label>
-                    <input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox" />
-                    Gitter help rooms
+                    <input name="taste" value="muffins" type="checkbox" class="input-checkbox" />
+                    Breakfast Muffins- (A selection of classic breakfast favorites like Blueberry, Lemon Poppy, and Banana Nut)
                 </label>
                 <label>
-                    <input name="prefer" value="videos" type="checkbox" class="input-checkbox" />
-                    Videos
-                </label>
-                <label>
-                    <input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox" />City
-                    Meetups</label>
-                <label>
-                    <input name="prefer" value="wiki" type="checkbox" class="input-checkbox" />Wiki</label>
-                <label>
-                    <input name="prefer" value="forum" type="checkbox" class="input-checkbox" />Forum</label>
-                <label>
-                    <input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox" />
-                    Additional Courses
+                    <input name="taste" value="danish" type="checkbox" class="input-checkbox" />
+                    Breakfast Danishes- (A selection of our handmade Crossiants and Danishes )
                 </label>
             </div>
 
             <div class="form-group">
-                <p>Any comments or suggestions?</p>
-                <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here...">
+                <p>Any Food allergies or additional needs? </p>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter any additional information here....">
                 </textarea>
             </div>
 
