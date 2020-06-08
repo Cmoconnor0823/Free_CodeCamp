@@ -1,12 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Survey Form</title>
+    <title>Product Landing Page</title>
 </head>
+
 <body>
-    
+    <!-- User Story #1: My product landing page should have a header
+     element with a corresponding id="header".-->
+    <header id="header">
+        <!-- User Story #3: Within the #header element I can see
+            a nav element with a corresponding id="nav-bar".-->
+            <nav id="nav-bar">
+                <ul>
+                    <!-- User Story #2: I can see an image within the header
+                element with a corresponding id="header-img". A company
+                logo would make a good image here.-->
+                    <img id="header-img" src="assets/img/201552262015-03-054393290LOGOGROUND-A ECO PAPER.jpg" alt="Company Logo" />
+                <!-- User Story #4: I can see at least three
+            clickable elements inside the nav element,
+            each with the class nav-link. -->
+                <li class="nav-link"><a href="#">Home</a></li>
+                <li class="nav-link"><a href="#">News</a></li>
+                <li class="nav-link"><a href="#">Contact</a></li>
+                <li class="nav-link"><a href="#">About</a></li>
+                <!--User Story #5: When I click a .nav-link button
+                 in the nav element, I am taken to the corresponding 
+                 section of the landing page. -->
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <section>
+        <!--User Story #6: I can watch an embedded product
+            video with id="video". -->
+        <video id="video" width="320" height="240" controls>
+            <source src="assets/video/bow.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+    <section>
+        <!--User Story #7: My landing page has a form element
+            with a corresponding id="form".-->
+        <form id="form">
+            <!--User Story #8: Within the form, there is an input
+                field with id="email" where I can enter an email address.-->
+
+            <!--User Story #9: The #email input field should have placeholder
+                text to let the user know what the field is for.-->
+            <!--User Story #10: The #email input field uses HTML5 validation
+                to confirm that the entered text is an email address.-->
+            <!--User Story #11: Within the form, there is a submit input
+                with a corresponding id="submit".-->
+            <!--User Story #12: When I click the #submit element,
+                the email is submitted to a static page (use this mock
+                URL: https://www.freecodecamp.com/email-submit).-->
+            </form>
+            
+        </section>
+        
+        
+        
+        
+
 </body>
+
 </html>
