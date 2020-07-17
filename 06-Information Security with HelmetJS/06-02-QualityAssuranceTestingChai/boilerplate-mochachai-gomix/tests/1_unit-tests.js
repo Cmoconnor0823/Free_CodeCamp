@@ -8,7 +8,8 @@ suite('Unit Tests', function(){
   suite('Basic Assertions', function() {
     /** assert.fail() will always fail. Change it into something more useful... **/
   
-    // Use this link to test your challenges https://yielding-foregoing-starburst.glitch.me/_api/get-tests?type=unit&n=10 with the test number being the last value
+    // Use this link to test your challenges if working on glitch
+    // https://yielding-foregoing-starburst.glitch.me/_api/get-tests?type=unit&n=10 with the test number being the last value
     
     /** 1 - Use assert.isNull() or assert.isNotNull() to make the tests pass. **/
     test('#isNull, #isNotNull', function(){
