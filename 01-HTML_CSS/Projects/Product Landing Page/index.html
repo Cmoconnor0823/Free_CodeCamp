@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Product Landing Page</title>
 </head>
 
@@ -14,9 +15,8 @@
     <header id="header">
         <!-- User Story #3: Within the #header element I can see
             a nav element with a corresponding id="nav-bar".-->
-        <nav id="nav-bar">
-            <img id="header-img" src="assets/img/redBox.jpg"
-                alt="Company Logo" />
+        <nav id="nav-bar" class="nav">
+            <img id="header-img" href="#home" src="assets/img/redBox.jpg" alt="Company Logo" />
             <ul class="main-nav">
                 <!-- User Story #2: I can see an image within the header
                 element with a corresponding id="header-img". A company
@@ -24,96 +24,222 @@
                 <!-- User Story #4: I can see at least three
             clickable elements inside the nav element,
             each with the class nav-link. -->
-                <li class="nav-link"><a href="#home">Home</a></li>
-                <li class="nav-link"><a href="#news">News</a></li>
-                <li class="nav-link"><a href="#contact">Contact</a></li>
-                <li class="nav-link"><a href="#about">About</a></li>
+                <li class="nav-link" href="#home"><a href="#home">Home</a></li>
+                <li class="nav-link" href="#product"><a href="#product">Products</a></li>
+                <li class="nav-link" href="#news"><a href="#news">News</a></li>
+                <li class="nav-link" href="#contact"><a href="#contact">Contact</a></li>
                 <!--User Story #5: When I click a .nav-link button
-                 in the nav element, I am taken to the corresponding 
-                 section of the landing page. -->
+                    in the nav element, I am taken to the corresponding 
+                    section of the landing page. -->
             </ul>
+            <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a> -->
         </nav>
     </header>
-    <br>
-    <section id="home">
-        <h1>This is the home section of the site</h1>
-        <p>This should hold information about the site, maybe a image that is a third of the view height with a few
-            blurbs over it
-            look into setting the image as a background for this container, either a img of a plain pattern or something
-            with packages and string
-        </p>
-    </section>
-    <section id="news">
-        <p>This section should have a seasonal up and coming something or other, or a blurb about working with a local
-            school or the like</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt efficitur vehicula. Praesent
-            nec libero eu magna feugiat hendrerit ut ultricies nulla. Curabitur eu odio augue.
-            Aenean vulputate ante vel lorem sollicitudin, dictum aliquet sem commodo. Sed dignissim ligula a dolor
-            ullamcorper, ut aliquet ex efficitur. Nullam justo dui, aliquet id nulla et, pellentesque ornare dui.
-            Etiam cursus congue condimentum.
-            Phasellus vulputate lorem sit amet tortor tempor gravida. Praesent dui nisi, bibendum eu feugiat vel,
-            tincidunt id mauris. Aenean non finibus quam. Curabitur eget pharetra nulla, sit amet tempus augue. Vivamus
-            quis massa quis ex lacinia pharetra.
-            In a mattis ex. Maecenas eu euismod orci, non scelerisque urna. Duis ligula eros, vulputate in lacus ornare,
-            iaculis condimentum tortor. Nam gravida purus vel urna tempus pretium.
 
-            Pellentesque sit amet nibh non nisl dictum eleifend nec fringilla turpis. Pellentesque porta nibh enim, at
-            ornare elit commodo sit amet. Pellentesque malesuada sagittis tortor, ac semper lacus tincidunt quis.
-            Vestibulum dui odio, dictum in sapien ultricies, accumsan elementum mi.
-            Fusce ac libero pellentesque, tincidunt orci quis, consequat sapien.
-            Phasellus efficitur, turpis nec sagittis mattis, dolor lacus faucibus orci, non auctor nisl risus vel
-            lectus. Vestibulum eu tempor velit.
-            Mauris vitae ligula odio. Sed venenatis turpis eget tempus dapibus. Cras pulvinar pellentesque augue non
-            lobortis. Fusce dolor ex, volutpat at nisl in, lacinia volutpat metus. Sed sagittis nulla id pellentesque
-            consectetur.
-            Morbi tincidunt blandit orci, at laoreet augue eleifend ac.</p>
-        <!--User Story #6: I can watch an embedded product
-            video with id="video". -->
-        <video id="video" width="320" height="240" controls>
-            <source src="assets/video/bow.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </section>
-    <section id="contact">
-        <h1>Contact us here </h1>
-        <!--User Story #7: My landing page has a form element
-            with a corresponding id="form".-->
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
-            <label for="firstName">First name:</label>
-            <input type="text" id="firstName" name="firstName">
-            <br>
-            <label for="lastName">Last name:</label>
-            <input type="text" id="lastName" name="lastName">
-            <br>
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone">
-            <br>
-            <!--User Story #8: Within the form, there is an input
-                field with id="email" where I can enter an email address.-->
-            <label for="email">Last name:</label>
-            <input id="email" type="email" placeholder="janeDoe@gmail.com" name="email">
-            <!--User Story #9: The #email input field should have placeholder
-                text to let the user know what the field is for.-->
-            <!--User Story #10: The #email input field uses HTML5 validation
-                to confirm that the entered text is an email address.-->
-            <!--User Story #11: Within the form, there is a submit input
-                with a corresponding id="submit".-->
-            <input id="submit" type="submit">
-            <!--User Story #12: When I click the #submit element,
-                the email is submitted to a static page (use this mock
-                URL: https://www.freecodecamp.com/email-submit).-->
-        </form>
+    <div id="content">
+        <div class="home-container">
+            <img class="company-name" src="./assets/img/201552262015-03-054393290LOGOGROUND-A ECO PAPER.jpg">
+            <section id="home" class="home-img">
+                <div class="home-text">
+                    <h1>This is the home section of the site</h1>
+                    <p>This should hold information about the site, maybe a image that is a third of the view height
+                        with a
+                        few
+                        blurbs over it
+                        look into setting the image as a background for this container, either a img of a plain pattern
+                        or
+                        something
+                        with packages and string
+                    </p>
+                </div>
+            </section>
+        </div>
+        <h1 id="product" class="section-title">Lets add a title to the product section</h1>
 
-    </section>
-    <section id="about">
-        <h1>This is the about section</h1>
-    </section>
+        <div id="product"></div>
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <img src="assets/img/grad.jpg" alt="Blue wrapping" style="width:100%">
+                        <div class="container">
+                            <h4><b>John Doe</b></h4>
+                            <p>Architect & Engineer</p>
+                            <button class="buy"><a href="#contact">Purchase Now!</a></button>
+                        </div>
+                    </div>
 
 
-<footer id="footer">make sure you load in font awesome here</footer>
+                    <div class="card">
+                        <img src="assets/img/redBox.jpg" alt="Blue wrapping" style="width:100%">
+                        <div class="container">
+                            <h4><b>John Doe</b></h4>
+                            <p>Architect & Engineer</p>
+                            <button class="buy"><a href="#contact">Purchase Now!</a></button>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <img src="assets/img/greenBox.jpg" alt="Blue wrapping" style="width:100%">
+                        <div class="container">
+                            <h4><b>John Doe</b></h4>
+                            <p>Architect & Engineer</p>
+                            <button class="buy"><a href="#contact">Purchase Now!</a></button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <img src="assets/img/blueBox.jpg" alt="Blue wrapping" style="width:100%">
+                        <div class="container">
+                            <h4><b>Cool colors</b></h4>
+                            <p>Cool tones for Paper, Bags and Bows!</p>
+                            <button class="buy"><a href="#contact">Purchase Now!</a></button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/img/greenBox.jpg" alt="Blue wrapping" style="width:100%">
+                        <div class="container">
+                            <h4><b>John Doe</b></h4>
+                            <p>Architect & Engineer</p>
+                            <button class="buy"><a href="#contact">Purchase Now!</a></button>
+                        </div>
+                    </div>
+                   
+
+                    <div class="card">
+                        <img src="assets/img/shiny.jpg" alt="Blue wrapping" style="width:100%">
+                        <div class="container">
+                            <h4><b>John Doe</b></h4>
+                            <p>Architect & Engineer</p>
+                            <button class="buy"><a href="#contact">Purchase Now!</a></button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="column">
+                    <div class="card">
+                        <img src="assets/img/roll.jpg" alt="Blue wrapping" style="width:100%">
+                        <div class="container">
+                            <h4><b>John Doe</b></h4>
+                            <p>Architect & Engineer</p>
+                            <button class="buy"><a href="#contact">Purchase Now!</a></button>
+                        </div>
+                    </div>
+                 
+                    <div class="card">
+                        <img src="assets/img/hb.jpg" alt="Blue wrapping" style="width:100%">
+                        <div class="container">
+                            <h4><b>John Doe</b></h4>
+                            <p>Architect & Engineer</p>
+                            <button class="buy"><a href="#contact">Purchase Now!</a></button>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <img src="assets/img/goldBox.jpg" alt="Blue wrapping" style="width:100%">
+                        <div class="container">
+                            <h4><b>John Doe</b></h4>
+                            <p>Architect & Engineer</p>
+                            <button class="buy"><a href="#contact">Purchase Now!</a></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <h1 id="news" class="section-title">Lets add a title to the news section</h1>
+        <div class="news-container">
+            <div class="news-text">
+                <p>This section should have a seasonal up and coming something or other, or a blurb about working
+                    with a
+                    local
+                    school or the like</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tincidunt efficitur
+                    vehicula.
+                    Praesent
+                    nec libero eu magna feugiat hendrerit ut ultricies nulla. Curabitur eu odio augue.
+                    Aenean vulputate ante vel lorem sollicitudin, dictum aliquet sem commodo. Sed dignissim ligula a
+                    dolor
+                    ullamcorper, ut aliquet ex efficitur. Nullam justo dui, aliquet id nulla et, pellentesque ornare
+                    dui.
+                    Etiam cursus congue condimentum.
+                    Phasellus vulputate lorem sit amet tortor tempor gravida. Praesent dui nisi, bibendum eu feugiat
+                    vel,
+                    tincidunt id mauris. Aenean non finibus quam. Curabitur eget pharetra nulla, sit amet tempus
+                    augue.
+                    Vivamus
+                    quis massa quis ex lacinia pharetra.
+                    In a mattis ex. Maecenas eu euismod orci, non scelerisque urna. Duis ligula eros, vulputate in
+                    lacus
+                    ornare,
+                    iaculis condimentum tortor. Nam gravida purus vel urna tempus pretium.
+
+                </p>
+                <!--User Story #6: I can watch an embedded product
+                            video with id="video". -->
+            </div>
+            <div class="news-video">
+                <video id="video" width="500" controls>
+                    <source src="assets/video/bow.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <h1 id="contact" class="section-title">Lets add a title to the Contact section</h1>
+        <div class="contact-section">
+            <div>
+                <h2>Contact us here </h2>
+                <p>Lets add in a paragraph with some info about us
+                    use your social media icons
+                </p>
+            </div>
+            <div>
+                <!--User Story #7: My landing page has a form element
+                with a corresponding id="form".-->
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
+                    <label for="firstName">First name:</label>
+                    <input type="text" id="firstName" name="firstName">
+                    <br>
+                    <label for="lastName">Last name:</label>
+                    <input type="text" id="lastName" name="lastName">
+                    <br>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                    <br>
+                    <!--User Story #8: Within the form, there is an input
+                    field with id="email" where I can enter an email address.-->
+                    <label for="email">Last name:</label>
+                    <input id="email" type="email" placeholder="janeDoe@gmail.com" name="email">
+                    <!--User Story #9: The #email input field should have placeholder
+                        text to let the user know what the field is for.-->
+                    <!--User Story #10: The #email input field uses HTML5 validation
+                            to confirm that the entered text is an email address.-->
+                    <!--User Story #11: Within the form, there is a submit input
+                                with a corresponding id="submit".-->
+                    <input id="submit" type="submit">
+                    <!--User Story #12: When I click the #submit element,
+                                    the email is submitted to a static page (use this mock
+                                    URL: https://www.freecodecamp.com/email-submit).-->
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+    <footer id="footer">make sure you load in font awesome here</footer>
 
 
 </body>
+
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 </html>

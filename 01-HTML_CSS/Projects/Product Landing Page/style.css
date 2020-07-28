@@ -7,70 +7,246 @@
     --color-lightbrown: #8C5F37;
     --color-brown: #590202;
 }
-/* User Story #13: The navbar should always be at the
- top of the viewport. */
 
- /*
- body{
-     font-family:  ;
- }
- */
- header{
-     position: sticky;
-     top: 0;
+/* Beginning of nav bar code */
 
- }
-nav{
-    display: flex;
-    
-    font-size: 1em;
-    background-image: linear-gradient(260deg, #D9043D 0%, #A60311   100%);
+body {
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    display: inline-block
 }
+
+/* User Story #13: The navbar should always be at the
+top of the viewport. */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    font-size: 1em;
+    background-image: linear-gradient(260deg, #D9043D 0%, #A60311 100%);
+}
+
+#header-img {
+    display: inline-block;
+    margin: 5px;
+    max-height: 5rem;
+    max-width: 5rem;
+}
+
 .main-nav {
     width: 100%;
     list-style-type: none;
-    
 }
 
 li {
     text-align: center;
     float: right;
+    cursor: pointer;
 }
 
 li a {
     display: block;
     color: var(--color-brown);
     text-align: center;
-    padding: 14px 16px;
+    margin: 2px;
+    padding: .75em;
     text-decoration: none;
 }
 
 li a:hover {
     background-color: var(--color-pink);
-    color: var(--color-brown);
+    color: white;
     border: 1px solid #555;
-  }
-
-#header-img{
-    display: inline-block;
-    margin:5px;
-    max-height: 5rem;
-    max-width: 5rem;
 }
+
+/* Style the hamburger menu
+
+.nav a.icon {
+    position: absolute;
+    color: var(--color-brown);
+    right: 0;
+    top: .5em;
+    padding: .5em;
+} */
+
+
+
 /* End of nav bar code */
 
-#footer{
-    width: 100%;
-    height:6vh;
-    background-color: rgb(161, 18, 18); 
+.company-name {
+    display: block;
+    margin: auto;
+    padding: auto;
+}
+
+/*beginning of home*/
+
+.home-container {
+    margin-bottom: 10em;
+}
+
+.home-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./assets/img/redBox.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.home-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* end of home */
+
+.section-title {
+    display: block;
+    margin: 5em;
+    text-align: center;
+    
+}
+/* image grid*/
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1em
+}
+.container h4{
+    margin:2em
+}
+.container p{
+    margin:3em
+}
+
+.buy{
+    height: 3rem;
+    background-color: var(--color-red);
+    margin: auto;
+    border-radius: 4px;
+    padding: 1em;
+}
+.buy:hover{
+    background-color: var(--color-pink);
+}
+
+.buy a{
+    font-size: 16px;
+    color:var(--color-brown)
+}
+.buy a:hover{
+    background-color: var(--color-pink);
+    color: white;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    flex: 30%;
+    max-width: 30%;
+    padding: 0 4px;
+    margin: auto;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    min-width: 20%;
+    min-height: 20%;
 }
 
 
 
+/* image grid */
 
+
+/* Beginning of news section */
+
+.news-container {
+    display: flex;
+    height: 95vh;
+    padding: 1em;
+    margin: 5em;
+}
+
+.news-text {
+    float: right;
+    padding-right: 5em;
+    width: 70%;
+}
+
+.news-video {
+    float: right;
+}
+
+/* End of news section */
+
+.contact-section {
+    margin: 5em;
+}
+
+#footer {
+    width: 100%;
+    height: 6vh;
+    background-color: rgb(161, 18, 18);
+}
 
 /* User Story #14: My product landing page should
  have at least one media query.*/
 
 /* User Story #15: My product landing page should utilize 
 CSS flexbox at least once. */
+
+@media screen and (max-width: 500px) {
+    #header-img {
+        margin: 2px
+    }
+    .nav a {
+        float: none;
+        width: 75%;
+    }
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .news-container{
+        display: block;
+        margin: 1em;
+        padding: 1em;
+    }
+    .news-text{
+        width: 85%;
+        font-size: 2rem;
+        text-align: center;
+        padding: 1em;
+    }
+    .news-video{
+        width: 100%;
+    }
+}
