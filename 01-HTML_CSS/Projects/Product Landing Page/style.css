@@ -210,13 +210,35 @@ li a:hover {
 
 /* End of news section */
 
+/* Contact Section */
+#contact{
+    display: flex;
+    float: center;
+}
 .contact-section {
     margin: 5em;
 }
+form{
+    max-width: 95%;
+}
+input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    width: 100%;
+  }
+#submit{
+    font-size: .75em;
+    padding: .5em;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 #footer {
+    padding: 1em;
+    text-align:center;
     width: 100%;
-    height: 6vh;
+    height: 10vh;
     background-color: rgb(161, 18, 18);
 }
 
@@ -250,6 +272,9 @@ CSS flexbox at least once. */
         padding: 1em;
     }
     .news-video{
-        width: 100%;
+     justify-content: center;
+     padding: 1em;
+     width: 85%;
     }
+   
 }
