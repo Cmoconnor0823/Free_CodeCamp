@@ -5,6 +5,7 @@
 
 /* User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar"
  should be shown on the left side of the screen and should always be visible to the user. */
+
 nav {
   top: 0;
   position: fixed;
@@ -19,11 +20,11 @@ ul {
   height: 100%;
 }
 
-.nav-header{
+.nav-header {
   position: relative;
   margin: 0;
   max-width: 16vw;
-  padding: 1em; 
+  padding: 1em;
   border-bottom: 1px solid;
   text-align: center;
   font-weight: bolder;
@@ -34,7 +35,8 @@ ul {
   list-style: none;
   position: relative;
 }
-.main-list{
+
+.main-list {
   list-style-type: none;
   padding: .5rem 1rem;
   border-bottom: 2px solid lightgrey;
@@ -50,7 +52,6 @@ li a {
   padding: 1em;
   color: black;
   max-width: 16vw;
-  
 }
 
 li a:hover {
@@ -64,21 +65,21 @@ li a:hover {
   margin: 2vw;
 }
 
-
 p {
   margin-top: 4vh;
 }
 
-.lgheader{
+.lgheader {
   font-size: 2em;
   font-weight: bolder;
   padding-left: 2vw;
+  position: relative;
 }
 
-.mdheader{
+.mdheader {
   font-size: medium;
   font-weight: bold;
-  padding: 2vh 0  2vh;
+  padding: 2vh 0 2vh;
 }
 
 .main-section {
@@ -87,62 +88,50 @@ p {
 
 @media only screen and (max-width: 600px) {
   nav {
+    top: 0;
     position: fixed;
-    top:0;
-    max-width: 100vw;
-    max-height: 50vh;
+    max-width: 100%;
+    max-height: 8em;
     display: block;
     overflow: auto;
     background-color: white;
-    
+    z-index: 3;
   }
-  
   ul {
     margin: 0;
     padding: 0;
   }
-  
-  .nav-header{
-    position: relative;
-    top:0;
+  .nav-header {
+    top: 0;
     margin: 0;
     max-width: 100%;
     clear: both;
   }
-  
   #navbar li {
-    list-style: none;
-    position: relative;
     float: left;
   }
-  li a{
-    display: block;
-  }
-  .main-list{
-    list-style-type: none;
-    padding: .5rem 1rem;
-    border-bottom: 2px solid lightgrey;
-    max-width: 20em;
-  }
-  
   li a {
-    border-bottom: 1px solid;
-    list-style-type: none;
-    text-align: center;
     display: block;
-    text-decoration: none;
-    color: black;   
+    max-width: 7em;
+    height: 2em;
   }
-  
   #main-doc {
-    position: absolute;
-    top: 20vw;
-    margin: 2vw;
-  }
-  .main-section{
+    left: 0;
     margin: 1em;
   }
+  section::before {
+    display: block;
+    content: " ";
+    margin-top: 9em;
+    height: 9em;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  #Code_Editors{
+    margin-top: -7em;
+  }
 }
+
 /*
 User Story #15: My Technical Documentation page should use at least one media query. 
 */
