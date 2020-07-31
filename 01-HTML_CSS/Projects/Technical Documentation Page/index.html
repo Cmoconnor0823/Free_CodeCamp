@@ -9,37 +9,44 @@
     </head>    
     
     <body>
-        <nav>
+        <!-- User Story #8: I can see a nav element with a corresponding id="navbar". -->
+        <nav id="navbar">
+            <!-- User Story #9: The navbar element should contain one header element
+                 which contains text that describes the topic of the technical documentation. -->
+                 <header>How to build your first Web Site!</header>
+                 <!-- User Story #11: The header element in the navbar must come before any link
+                     (a) elements in the navbar. -->
             <ul>
-                <li><a href="#topic_1">One</a></li>
-                <li><a href="#topic_2">Two</a></li>
-                <li><a href="#topic_3">Three</a></li>
-                <li><a href="#topic_4">Four</a></li>
-                <li><a href="#topic_5">Five</a></li>
+                <!-- User Story #10: Additionally, the navbar should contain link (a) elements
+                    with the class of nav-link. There should be one for every element with the
+                    class main-section. -->
+                <li><a class="nav-link" href="#Code_Editors">Code Editors</a></li>
+                <li><a class="nav-link" href="#Browsers">Browsers</a></li>
+                <li><a class="nav-link" href="#Hosting_Your_Site">Hosting Your Site</a></li>
+                <li><a class="nav-link" href="#Start_Coding_HTML">Start_Coding_HTML</a></li>
+                <li><a class="nav-link" href="#Style_with_CSS">Style with CSS</a></li>
+                <!-- User Story #12: Each element with the class of nav-link should contain text
+                    that corresponds to the header text within each section (e.g. if you have a
+                    "Hello world" section/header, your navbar should have an element which contains
+                    the text "Hello world"). -->
               </ul>
-        </nav>
-
-            <!-- User Story #8: I can see a nav element with a corresponding id="navbar". -->
+            </nav>
         
-            <!-- User Story #9: The navbar element should contain one header element which contains text that describes the topic of the technical documentation. -->
-        
-            <!-- User Story #10: Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section. -->
-        
-            <!-- User Story #11: The header element in the navbar must come before any link (a) elements in the navbar. -->
-        
-            <!-- User Story #12: Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world"). -->
-        
-            <!-- User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header. -->
+            <!-- User Story #13: When I click on a navbar element, the page should navigate to the
+                corresponding section of the main-doc element (e.g. If I click on a nav-link element
+                that contains the text "Hello world", the page navigates to a section element that
+                has that id and contains the corresponding header. -->
         
     <main id="main-doc">
-        <!-- User Story #1: I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation). -->
+        <!-- User Story #1: I can see a main element with a corresponding id="main-doc",
+            which contains the page's main content (technical documentation). -->
 
         <!-- User Story #2: Within the #main-doc element, I can see several section elements, each with a
              class of main-section. There should be a minimum of 5. -->
-        <section id="topic_1" class="main-section"> 
+        <section id="Code_Editors" class="main-section"> 
             <!-- User Story #3: The first element within each .main-section should be a header element
                     which contains text that describes the topic of that section. -->
-            <header id="topic_1"> Topic</header>        
+            <header id="Code_Editors">Code Editors</header>        
 
             <!-- User Story #4: Each section element with the class of main-section should also have an id
              that corresponds with the text of each header contained within it. Any spaces should be replaced   
@@ -48,7 +55,7 @@
 
             <!-- User Story #5: The .main-section elements should contain at least 10 p elements total (not each). -->   
             <p>
-                <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
+               
 
             </p>    
             <p>
@@ -63,10 +70,10 @@
             </p>
         </section>    
 
-        <section id="topic_2" class="main-section">
+        <section id="Browsers" class="main-section">
             <!-- User Story #3: The first element within each .main-section should be a header element
                     which contains text that describes the topic of that section. -->
-            <header id="topic_2"> Topic</header>        
+            <header id="Browsers">Browsers</header>        
 
             <!-- User Story #4: Each section element with the class of main-section should also have an id
              that corresponds with the text of each header contained within it. Any spaces should be replaced   
@@ -83,10 +90,10 @@
             </p>    
         </section>    
 
-        <section id="topic_3" class="main-section">
+        <section id="Hosting_Your_Site" class="main-section">
             <!-- User Story #3: The first element within each .main-section should be a header element
                     which contains text that describes the topic of that section. -->
-            <header id="topic_3"> Topic</header>        
+            <header id="Hosting_Your_Site">Hosting Your Site</header>        
 
             <!-- User Story #4: Each section element with the class of main-section should also have an id
              that corresponds with the text of each header contained within it. Any spaces should be replaced   
@@ -103,10 +110,10 @@
             </p>    
         </section>    
 
-        <section id="topic_4" class="main-section">
+        <section id="Start_Coding_HTML" class="main-section">
             <!-- User Story #3: The first element within each .main-section should be a header element
                     which contains text that describes the topic of that section. -->
-            <header id="topic_4"> Topic</header>        
+            <header id="Start_Coding_HTML">Start Coding HTML</header>        
 
             <!-- User Story #4: Each section element with the class of main-section should also have an id
              that corresponds with the text of each header contained within it. Any spaces should be replaced   
@@ -123,10 +130,10 @@
             </p>    
         </section>    
 
-        <section id="topic_5" class="main-section">
+        <section id="Style_with_CSS" class="main-section">
             <!-- User Story #3: The first element within each .main-section should be a header element
                     which contains text that describes the topic of that section. -->
-            <header id="topic_5"> Topic</header>        
+            <header id="Style_with_CSS">Add Style with CSS</header>        
 
             <!-- User Story #4: Each section element with the class of main-section should also have an id
              that corresponds with the text of each header contained within it. Any spaces should be replaced   

@@ -1,33 +1,40 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
-nav{
-    top: 0;
-    position: absolute;
+
+nav {
+  top: 0;
+  position: fixed;
 }
-ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;   
-    width: 20%;
-    height: 100%; 
-  position: fixed; 
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  min-width: 2vw;
+  height: 100%;
+  position: fixed;
   overflow: auto;
 }
 
 li a {
-    text-align: center;
-    display: block;
-    text-decoration: none;
-    padding:1em
-  }
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  padding: 1em
+}
 
-  li a:hover {
-    background-color: #555;
-    color: white;
-  }
+li a:hover {
+  background-color: #555;
+  color: white;
+}
 
+#main-doc {
+  position: fixed;
+  left: 25vw;
+  width: 100%;
+}
 
 /*
 User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user. -->
