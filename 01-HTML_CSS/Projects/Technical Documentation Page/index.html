@@ -204,7 +204,7 @@
                 You will want to place this between your <code> < body> < /body> </code> html tags. <br>
                 <br>
                 For example: <br>
-                <code> < body> <br> < h1> Hello World! < /h1><br> < /body></code>
+                <code> < body> <br> <strong>< h1> Hello World! < /h1> </strong> <br> < /body></code>
             </p>
         </section>
 
@@ -220,11 +220,64 @@
 
             <!-- User Story #5: The .main-section elements should contain at least 10 p elements total (not each). -->
             <p>
-                <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
+                Now let us style our greeting to the world with CSS! There are several different ways
+                to add style to your web pages, but we will use internal CSS styling to keep it simple.<br>
+                Let's go back to our <code>index.html</code> page. <br>
+                At the top of your code, after your page's metadata and site
+                title, but before your closing <code> < /head > </code> add in your opening and closing
+               < <code>  style</code>> < /<code>style</code>>
+                HTML tags.
+                <br>
+                For example: <br>
+                <code>
+                <br>
+               < !DOCTYPE html>
+               <br>
+            < html lang="en">
+            <br>
+             < head>
+             <br>
+             < meta charset="UTF-8">
+             <br>
+             < meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <br>
+             < title>Document < /title>
+             <br><br>
+             <strong> </code><<code>  style </code>>
+             <br>
+             < /<code>style </code>> </strong>
+             <code>
+             <br>
+             <br>
+             < /head>
+             <br>
+             < /html>
+            </code>
+                <br>
 
             </p>
             <p>
-
+                Now in the style tags we just made, let's create a rule with CSS to change the text
+                size and color. This is only a basic example, to see the <strong>Vast</strong> world of
+                Styling tools avaiable to you, spend some time looking at all the resources avaiable to you.
+                You are only limited by your imagination.
+            </p>
+            <p>In your style tags you made, add in the code below to change the color and size of your
+                Hello World!<br>
+                <code>
+                    <br><br>
+                    <strong></code><  <code> style</code>  > <code>
+                    <br>
+                    h1 { <br>
+                        font-size: large; <br>
+                        color: blue;
+                        <br>
+                    }
+                    <br>
+                    </code>< /<code>style</code>  > </strong>
+                    <br>
+                    <br>
+                </code>
             </p>
         </section>
 
@@ -232,4 +285,5 @@
 
 </body>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 </html>
