@@ -9,9 +9,9 @@
 nav {
   top: 0;
   position: fixed;
-  max-width: 17vw;
   max-height: 100vh;
   overflow: auto;
+  background-color: lightgoldenrodyellow;
 }
 
 ul {
@@ -63,6 +63,7 @@ li a:hover {
   position: absolute;
   left: 20vw;
   margin: 2vw;
+  background-color: lightgray;
 }
 
 p {
@@ -94,7 +95,7 @@ p {
     max-height: 8em;
     display: block;
     overflow: auto;
-    background-color: white;
+    background-color:lightgray;
     z-index: 3;
   }
   ul {
@@ -118,6 +119,7 @@ p {
   #main-doc {
     left: 0;
     margin: 1em;
+    background-color: lightgoldenrodyellow;
   }
   section::before {
     display: block;
