@@ -32,6 +32,12 @@ ul {
   list-style: none;
   position: relative;
 }
+.main-list{
+  list-style-type: none;
+  padding: .5rem 1rem;
+  border-bottom: 2px solid lightgrey;
+  max-width: 20em;
+}
 
 li a {
   border-bottom: 1px solid;
