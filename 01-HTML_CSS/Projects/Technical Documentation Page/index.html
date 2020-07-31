@@ -1,156 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Survey Form</title>
-    </head>    
-    
-    <body>
-        <!-- User Story #8: I can see a nav element with a corresponding id="navbar". -->
-        <nav id="navbar">
-            <!-- User Story #9: The navbar element should contain one header element
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <!-- User Story #8: I can see a nav element with a corresponding id="navbar". -->
+    <nav id="navbar">
+        <!-- User Story #9: The navbar element should contain one header element
                  which contains text that describes the topic of the technical documentation. -->
-                 <header>How to build your first Web Site!</header>
-                 <!-- User Story #11: The header element in the navbar must come before any link
+        <header class="nav-header">How to build your first Web Site!</header>
+        <!-- User Story #11: The header element in the navbar must come before any link
                      (a) elements in the navbar. -->
-            <ul>
-                <!-- User Story #10: Additionally, the navbar should contain link (a) elements
+        <ul>
+            <!-- User Story #10: Additionally, the navbar should contain link (a) elements
                     with the class of nav-link. There should be one for every element with the
                     class main-section. -->
-                <li><a class="nav-link" href="#Code_Editors">Code Editors</a></li>
-                <li><a class="nav-link" href="#Browsers">Browsers</a></li>
-                <li><a class="nav-link" href="#Hosting_Your_Site">Hosting Your Site</a></li>
-                <li><a class="nav-link" href="#Start_Coding_HTML">Start_Coding_HTML</a></li>
-                <li><a class="nav-link" href="#Style_with_CSS">Style with CSS</a></li>
-                <!-- User Story #12: Each element with the class of nav-link should contain text
+            <li><a class="nav-link" href="#Code_Editors">Code Editors</a></li>
+            <li><a class="nav-link" href="#Browsers">Browsers</a></li>
+            <li><a class="nav-link" href="#Hosting_Your_Site">Hosting Your Site</a></li>
+            <li><a class="nav-link" href="#Start_Coding_HTML">Start Coding HTML</a></li>
+            <li><a class="nav-link" href="#Style_with_CSS">Style with CSS</a></li>
+            <!-- User Story #12: Each element with the class of nav-link should contain text
                     that corresponds to the header text within each section (e.g. if you have a
                     "Hello world" section/header, your navbar should have an element which contains
                     the text "Hello world"). -->
-              </ul>
-            </nav>
-        
-            <!-- User Story #13: When I click on a navbar element, the page should navigate to the
+        </ul>
+    </nav>
+
+    <!-- User Story #13: When I click on a navbar element, the page should navigate to the
                 corresponding section of the main-doc element (e.g. If I click on a nav-link element
                 that contains the text "Hello world", the page navigates to a section element that
                 has that id and contains the corresponding header. -->
-        
+
     <main id="main-doc">
         <!-- User Story #1: I can see a main element with a corresponding id="main-doc",
             which contains the page's main content (technical documentation). -->
 
         <!-- User Story #2: Within the #main-doc element, I can see several section elements, each with a
              class of main-section. There should be a minimum of 5. -->
-        <section id="Code_Editors" class="main-section"> 
+        <section id="Code_Editors" class="main-section">
             <!-- User Story #3: The first element within each .main-section should be a header element
                     which contains text that describes the topic of that section. -->
-            <header id="Code_Editors">Code Editors</header>        
+            <header id="Code_Editors" class="lgheader">Code Editors</header>
 
             <!-- User Story #4: Each section element with the class of main-section should also have an id
              that corresponds with the text of each header contained within it. Any spaces should be replaced   
               with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding
                id="JavaScript_and_Java"). -->
 
-            <!-- User Story #5: The .main-section elements should contain at least 10 p elements total (not each). -->   
+            <!-- User Story #5: The .main-section elements should contain at least 10 p elements total (not each). -->
             <p>
-               
+                Before you can start coding your first line, you will need a Code Editing Program.
+                It can be something as simple as a program that can write plain text like Note Pad, but there are
+                many other programs that can help you as you write code.
 
-            </p>    
+            </p>
             <p>
+                Wikipedia.org has this to say about code editors- <br>
+                "A source-code editor is a text editor program designed specifically for editing source
+                code of computer programs. It may be a standalone application or it may be built into an
+                integrated development environment (IDE) or web browser. Source-code editors are a fundamental
+                programming tool, as the fundamental job of programmers is to write and edit source code. </p>
+            <p>
+                Source-code editors have features specifically designed to simplify and speed up typing of source code,
+                such as syntax highlighting, indentation, autocomplete and brace matching functionality. These editors
+                also provide a convenient way to run a compiler, interpreter, debugger, or other program relevant for
+                the software-development process. So, while many text editors like Notepad can be used to edit source
+                code, if they don't enhance, automate or ease the editing of code, they are not source-code editors.
                 <!-- User Story #7: The .main-section elements should contain at least 5 li items total (not each). -->
             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>    
+                <h3 class="mdheader">Some of the most popular code editors are:</h3>
+                <li>Visual Studio Code</li>
+                <li>Sublime Text</li>
+                <li>Atom</li>
+                <li>Notepad++</li>
+                <li>Eclipse</li>
+            </ul>
             </p>
-        </section>    
+            <p>Source: <a href="https://en.wikipedia.org/wiki/Source-code_editor"> Wikipedia- Source Code Editors </a>
+            </p>
+
+        </section>
 
         <section id="Browsers" class="main-section">
             <!-- User Story #3: The first element within each .main-section should be a header element
                     which contains text that describes the topic of that section. -->
-            <header id="Browsers">Browsers</header>        
+            <header id="Browsers" class="lgheader">Browsers</header>
 
             <!-- User Story #4: Each section element with the class of main-section should also have an id
              that corresponds with the text of each header contained within it. Any spaces should be replaced   
               with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding
                id="JavaScript_and_Java"). -->
 
-            <!-- User Story #5: The .main-section elements should contain at least 10 p elements total (not each). -->   
+            <!-- User Story #5: The .main-section elements should contain at least 10
+                p elements total (not each). -->
             <p>
-                <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
+                A web browser (commonly referred to as a browser) is a software application for accessing informatio
+                on the World Wide Web. When a user requests a web page from a particular website, the web browser
+                retrieves the necessary content from a web server and then displays the page on the user's device.
+            </p>
 
-            </p>    
             <p>
-         
-            </p>    
-        </section>    
+                A web browser is not the same thing as a search engine, though the two are often confused. For a
+                user, a search engine is just a website that provides links other websites. However, to connect
+                to a website's server and display its web pages, a user must have a web browser installed.
+            <ul>
+                <h3 class="mdheader">Some of the most popular Web Browsers are:</h3>
+                <li>Google Chrome</li>
+                <li>Mozilla Firefox</li>
+                <li>Safari</li>
+                <li>Microsoft Edge</li>
+                <li>Opera</li>
+            </ul>
+            </p>
+            <p>Source: <a href="https://en.wikipedia.org/wiki/Web_browser"> Wikipedia- Web Browsers </a> </p>
+        </section>
 
         <section id="Hosting_Your_Site" class="main-section">
             <!-- User Story #3: The first element within each .main-section should be a header element
                     which contains text that describes the topic of that section. -->
-            <header id="Hosting_Your_Site">Hosting Your Site</header>        
+            <header id="Hosting_Your_Site" class="lgheader">Hosting Your Site</header>
 
             <!-- User Story #4: Each section element with the class of main-section should also have an id
              that corresponds with the text of each header contained within it. Any spaces should be replaced   
               with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding
                id="JavaScript_and_Java"). -->
 
-            <!-- User Story #5: The .main-section elements should contain at least 10 p elements total (not each). -->   
+            <!-- User Story #5: The .main-section elements should contain at least 10 p elements total (not each). -->
             <p>
-                <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
-
-            </p>    
+                A web hosting service is a type of Internet hosting service that allows individuals and organizations
+                to make their website accessible via the World Wide Web. Web hosts are companies that provide space on
+                a server owned or leased for use by clients, as well as providing Internet connectivity, typically in a
+                data center. Web hosts can also provide data center space and connectivity to the Internet for other
+                servers located in their data center, called colocation, also known as Housing in Latin America or
+                France.
+            </p>
             <p>
-         
-            </p>    
-        </section>    
+                The most basic is web page and small-scale file hosting, where files can be uploaded via File Transfer
+                Protocol (FTP) or a Web interface. The files are usually delivered to the Web "as is" or with minimal
+                processing. Many Internet service providers (ISPs) offer this service free to subscribers. Individuals
+                and organizations may also obtain Web page hosting from alternative service providers.
+                        <br>
+                Free web hosting service is offered by different companies with limited services, sometimes supported by
+                advertisements, and often limited when compared to paid hosting.
+                        <br>
+                Single page hosting is generally sufficient for personal web pages. Personal web site hosting is
+                typically free, advertisement-sponsored, or inexpensive. Business web site hosting often has a higher
+                expense depending upon the size and type of the site.
+            </p>
+            <p>Source: <a href="https://en.wikipedia.org/wiki/Web_hosting_service"> Wikipedia- Web Hosting Service </a>
+            </p>
+        </section>
 
         <section id="Start_Coding_HTML" class="main-section">
             <!-- User Story #3: The first element within each .main-section should be a header element
                     which contains text that describes the topic of that section. -->
-            <header id="Start_Coding_HTML">Start Coding HTML</header>        
+            <header id="Start_Coding_HTML" class="lgheader">Start Coding HTML</header>
 
             <!-- User Story #4: Each section element with the class of main-section should also have an id
              that corresponds with the text of each header contained within it. Any spaces should be replaced   
               with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding
                id="JavaScript_and_Java"). -->
 
-            <!-- User Story #5: The .main-section elements should contain at least 10 p elements total (not each). -->   
+            <!-- User Story #5: The .main-section elements should contain at least 10 p elements total (not each). -->
             <p>
                 <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
 
-            </p>    
+            </p>
             <p>
-         
-            </p>    
-        </section>    
+
+            </p>
+        </section>
 
         <section id="Style_with_CSS" class="main-section">
             <!-- User Story #3: The first element within each .main-section should be a header element
                     which contains text that describes the topic of that section. -->
-            <header id="Style_with_CSS">Add Style with CSS</header>        
+            <header id="Style_with_CSS" class="lgheader">Add Style with CSS</header>
 
             <!-- User Story #4: Each section element with the class of main-section should also have an id
              that corresponds with the text of each header contained within it. Any spaces should be replaced   
               with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding
                id="JavaScript_and_Java"). -->
 
-            <!-- User Story #5: The .main-section elements should contain at least 10 p elements total (not each). -->   
+            <!-- User Story #5: The .main-section elements should contain at least 10 p elements total (not each). -->
             <p>
                 <!-- User Story #6: The .main-section elements should contain at least 5 code elements total (not each). -->
 
-            </p>    
+            </p>
             <p>
-         
-            </p>    
-        </section>    
 
-    </main>        
+            </p>
+        </section>
+
+    </main>
 
 </body>
 

@@ -6,23 +6,43 @@
 nav {
   top: 0;
   position: fixed;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  min-width: 2vw;
-  height: 100%;
-  position: fixed;
+  max-width: 17vw;
+  max-height: 100vh;
   overflow: auto;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.nav-header{
+  position: relative;
+  margin: 0;
+  max-width: 16vw;
+  padding: 1em; 
+  border-bottom: 1px solid;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+#navbar li {
+  list-style: none;
+  position: relative;
+}
+
 li a {
+  border-bottom: 1px solid;
+  list-style-type: none;
   text-align: center;
   display: block;
   text-decoration: none;
-  padding: 1em
+  padding: 1em;
+  color: black;
+  max-width: 16vw;
+  
 }
 
 li a:hover {
@@ -31,9 +51,30 @@ li a:hover {
 }
 
 #main-doc {
-  position: fixed;
-  left: 25vw;
-  width: 100%;
+  position: absolute;
+  left: 20vw;
+  margin: 2vw;
+}
+
+
+p {
+  margin-top: 4vh;
+}
+
+.lgheader{
+  font-size: 2em;
+  font-weight: bolder;
+  padding-left: 2vw;
+}
+
+.mdheader{
+  font-size: medium;
+  font-weight: bold;
+  padding: 2vh 0  2vh;
+}
+
+.main-section {
+  margin: 2vw;
 }
 
 /*
