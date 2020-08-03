@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Simple Portfolio Page</title>
 </head>
+
 <body>
-<!-- User Story #1: My portfolio should have a welcome section with an id of welcome-section. -->
+    <!-- User Story #6: My portfolio should have a navbar with an id of navbar. -->
+    <nav id="navbar" class="nav">
+        <img id="logo" href="welcome-section" src="img/" alt="Caitlin's logo">
 
-<!-- User Story #2: The welcome section should have an h1 element that contains text. -->
+        <!--Or  later on glitch here is the img with an img that is hosted online
+            <img id="logo" href="logo" src="     " alt="Caitlin's logo">-->
 
-<!-- User Story #3: My portfolio should have a projects section with an id of projects. -->
+        <!-- User Story #7: The navbar should contain at least one link that I can click
+                on to navigate to different sections of the page. -->
+        <ul class="nav-list">
+            <li class="nav-links" href="#welcome-container">Home</li>
+            <li class="nav-links" href="#about-container">About</li>
+            <li class="nav-links" href="#projects">Portfolio</li>
+            <li class="nav-links" href="#contact">Contact Me</li>
+        </ul>
+    </nav>
+    <main id="content">
+        <!-- User Story #1: My portfolio should have a welcome section with an id of welcome-section. -->
+        <div id="welcome-container" class="container">
+            <img id="logo" href="welcome-container" src="img/" alt="Welcome Banner">
+            <section id="welcome-section" class="welcome-img">
+                <div class="welcome-text">
+                    <!-- User Story #2: The welcome section should have an h1 element that contains text. -->
+                    <h1>Here is my welcome text</h1>
+                    <p>and here is some smaller welcome text</p>
+                </div>
+            </section>
+        </div>
+        <div id="about-container" class="container">
+            <h1 id="about">Title to the about section</h1>
+            <section class="about-text">
+                <p>Enter your "Elevator pitch here. This would be a 3 to 5 minute sales pitch about you. 
+                    Keep it short and play up your strenghts. 
+                    Maybe then make a link to your resume here or links to more info on you. </p>
+            </section>
+        </div>
 
-<!-- User Story #4: The projects section should contain at least one element with a class of project-tile to hold a project. -->
+        <!-- User Story #3: My portfolio should have a projects section with an id of projects. -->
 
-<!-- User Story #5: The projects section should contain at least one link to a project. -->
+        <!-- User Story #4: The projects section should contain at least one element with
+         a class of project-tile to hold a project. -->
 
-<!-- User Story #6: My portfolio should have a navbar with an id of navbar. -->
+        <!-- User Story #5: The projects section should contain at least one link to a project. -->
 
-<!-- User Story #7: The navbar should contain at least one link that I can click on to navigate to different sections of the page. -->
-
-<!-- User Story #8: My portfolio should have a link with an id of profile-link, which opens my GitHub or FCC profile in a new tab. -->
-
-<!-- User Story #9: My portfolio should have at least one media query. -->
-
-<!-- User Story #10: The height of the welcome section should be equal to the height of the viewport. -->
-
-<!-- User Story #11: The navbar should always be at the top of the viewport. -->
+        <!-- User Story #8: My portfolio should have a link with an id of profile-link,
+         which opens my GitHub or FCC profile in a new tab. -->
+    </main>
+    <footer></footer>
 </body>
+
 </html>
