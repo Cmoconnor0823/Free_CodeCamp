@@ -16,10 +16,12 @@ console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
 
 Hints
 Hint 1
-Create a copy of the second array inside of the function. This will ensure that the original array is not mutated. This can be done by using the slice operation on the second array, and assign it to a variable.
+Create a copy of the second array inside of the function. This will ensure that the original array is not mutated.
+This can be done by using the slice operation on the second array, and assign it to a variable.
 
 Hint 2
-Loop through all of the items in the first array. For each item in the first array splice it into the copied array in the index given as argument.
+Loop through all of the items in the first array. For each item in the first array splice it into the
+copied array in the index given as argument.
 
 Hint 3
 Increment the index after performing the splice.
